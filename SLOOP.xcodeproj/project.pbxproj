@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E4EC2F9281023B50009A0C0 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4EC2F8281023B50009A0C0 /* BarChartView.swift */; };
+		7E4EC2FC281023F40009A0C0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 7E4EC2FB281023F40009A0C0 /* SwiftUICharts */; };
 		7E6E75062810164A00DE4BA4 /* SLOOPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E75052810164A00DE4BA4 /* SLOOPApp.swift */; };
 		7E6E75082810164A00DE4BA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E75072810164A00DE4BA4 /* ContentView.swift */; };
 		7E6E750A2810164B00DE4BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E75092810164B00DE4BA4 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 		7E6E75172810164B00DE4BA4 /* SLOOPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E75162810164B00DE4BA4 /* SLOOPTests.swift */; };
 		7E6E75212810164B00DE4BA4 /* SLOOPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E75202810164B00DE4BA4 /* SLOOPUITests.swift */; };
 		7E6E75232810164B00DE4BA4 /* SLOOPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E75222810164B00DE4BA4 /* SLOOPUITestsLaunchTests.swift */; };
+		7E6E75332810234800DE4BA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E75322810234800DE4BA4 /* Localizable.strings */; };
+		7E6E75352810235B00DE4BA4 /* drinksdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E75342810235B00DE4BA4 /* drinksdata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E4EC2F8281023B50009A0C0 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		7E6E75022810164A00DE4BA4 /* SLOOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLOOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6E75052810164A00DE4BA4 /* SLOOPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLOOPApp.swift; sourceTree = "<group>"; };
 		7E6E75072810164A00DE4BA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +49,8 @@
 		7E6E751C2810164B00DE4BA4 /* SLOOPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLOOPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6E75202810164B00DE4BA4 /* SLOOPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLOOPUITests.swift; sourceTree = "<group>"; };
 		7E6E75222810164B00DE4BA4 /* SLOOPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLOOPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7E6E75322810234800DE4BA4 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		7E6E75342810235B00DE4BA4 /* drinksdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinksdata.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4EC2FC281023F40009A0C0 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +104,10 @@
 			children = (
 				7E6E75052810164A00DE4BA4 /* SLOOPApp.swift */,
 				7E6E75072810164A00DE4BA4 /* ContentView.swift */,
+				7E6E752F2810231900DE4BA4 /* Views */,
+				7E6E75302810232100DE4BA4 /* Models */,
 				7E6E75092810164B00DE4BA4 /* Assets.xcassets */,
+				7E6E75312810232800DE4BA4 /* Resources */,
 				7E6E750B2810164B00DE4BA4 /* Preview Content */,
 			);
 			path = SLOOP;
@@ -127,6 +138,30 @@
 			path = SLOOPUITests;
 			sourceTree = "<group>";
 		};
+		7E6E752F2810231900DE4BA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E4EC2F8281023B50009A0C0 /* BarChartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E6E75302810232100DE4BA4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7E6E75312810232800DE4BA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E6E75342810235B00DE4BA4 /* drinksdata.json */,
+				7E6E75322810234800DE4BA4 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +178,9 @@
 			dependencies = (
 			);
 			name = SLOOP;
+			packageProductDependencies = (
+				7E4EC2FB281023F40009A0C0 /* SwiftUICharts */,
+			);
 			productName = SLOOP;
 			productReference = 7E6E75022810164A00DE4BA4 /* SLOOP.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +253,9 @@
 				Base,
 			);
 			mainGroup = 7E6E74F92810164900DE4BA4;
+			packageReferences = (
+				7E4EC2FA281023F40009A0C0 /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
+			);
 			productRefGroup = 7E6E75032810164A00DE4BA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,7 +272,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6E75352810235B00DE4BA4 /* drinksdata.json in Resources */,
 				7E6E750D2810164B00DE4BA4 /* Preview Assets.xcassets in Resources */,
+				7E6E75332810234800DE4BA4 /* Localizable.strings in Resources */,
 				7E6E750A2810164B00DE4BA4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +302,7 @@
 			files = (
 				7E6E75082810164A00DE4BA4 /* ContentView.swift in Sources */,
 				7E6E75062810164A00DE4BA4 /* SLOOPApp.swift in Sources */,
+				7E4EC2F9281023B50009A0C0 /* BarChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +621,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E4EC2FA281023F40009A0C0 /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/willdale/SwiftUICharts";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E4EC2FB281023F40009A0C0 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E4EC2FA281023F40009A0C0 /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7E6E74FA2810164900DE4BA4 /* Project object */;
 }
