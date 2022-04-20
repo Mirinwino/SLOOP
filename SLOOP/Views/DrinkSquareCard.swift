@@ -18,7 +18,7 @@ struct DrinkSquare: View {
             Text(drink.name)
                 .fontWeight(.medium)
                 .foregroundColor(Color("AppDarkTeal"))
-            Text(drink.name)
+            Text(drink.Caffeine_mg)
                 .fontWeight(.medium)
                 .foregroundColor(Color("AppDarkTeal"))
         }
@@ -36,12 +36,12 @@ struct DrinkSquare: View {
 struct DrinkSquare_Previews: PreviewProvider {
   
     static var previews: some View {
-       
-            Group {
-                DrinkSquare(drink: drinks[0])
-                DrinkSquare(drink: drinks[1])
-            }
-            .previewLayout(.fixed(width: 200, height: 200))
+        DrinkSquare(drink: drinks[0])
+//            Group {
+//                DrinkSquare(drink: drinks[0])
+//                //DrinkSquare(drink: drinks[1])
+//            }
+//            .previewLayout(.fixed(width: 200, height: 200))
                
         
     }

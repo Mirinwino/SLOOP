@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Brewed coffee",
-    "Caffeine_mg": 163,
+    "Caffeine_mg": "163",
     "Amount_ml": 240,
     "mg_100_ml": 95,
     "imageName": "coffee"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Monster",
-    "Caffeine_mg": 145,
+    "Caffeine_mg": "145",
     "Amount_ml": 500,
     "mg_100_ml": 36,
     "imageName": "monster"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Shot of espresso",
-    "Caffeine_mg": 77,
+    "Caffeine_mg": "77",
     "Amount_ml": 30,
     "mg_100_ml": 212,
     "imageName": "coffee"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "Red Bull",
-    "Caffeine_mg": 76,
+    "Caffeine_mg": "76",
     "Amount_ml": 250,
     "mg_100_ml": 30,
     "imageName": "RedBull"
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "Instant coffee",
-    "Caffeine_mg": 57,
+    "Caffeine_mg": "57",
     "Amount_ml": 240,
     "mg_100_ml": 26,
     "imageName": "coffee"
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "name": "Diet coke",
-    "Caffeine_mg": 46,
+    "Caffeine_mg": "46",
     "Amount_ml": 330,
     "mg_100_ml": 12.96,
     "imageName": "DietCoke"
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "name": "Black tea",
-    "Caffeine_mg": 42,
+    "Caffeine_mg": "42",
     "Amount_ml": 240,
     "mg_100_ml": 20,
     "imageName": "tea_cup_1"
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "name": "Coke Zero",
-    "Caffeine_mg": 36,
+    "Caffeine_mg": "36",
     "Amount_ml": 330,
     "mg_100_ml": 9.58,
     "imageName": "CZero"
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "name": "Coca cola",
-    "Caffeine_mg": 34,
+    "Caffeine_mg": "34",
     "Amount_ml": 330,
     "mg_100_ml": 8,
     "imageName": "cocacola"
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "name": "Green tea",
-    "Caffeine_mg": 25,
+    "Caffeine_mg": "25",
     "Amount_ml": 240,
     "mg_100_ml": 7.61,
     "imageName": "tea_cup_2"
@@ -82,7 +82,7 @@
   {
     "id": 11,
     "name": "Decaf coffee",
-    "Caffeine_mg": 6,
+    "Caffeine_mg": "6",
     "Amount_ml": 240,
     "mg_100_ml": 2.4,
     "imageName": "coffee_decaf"
@@ -90,7 +90,7 @@
   {
     "id": 12,
     "name": "Hot chocolate",
-    "Caffeine_mg": 5,
+    "Caffeine_mg": "5",
     "Amount_ml": 240,
     "mg_100_ml": 2,
     "imageName": "hot_chocolate"
@@ -98,7 +98,7 @@
   {
     "id": 13,
     "name": "Faxe Kondi",
-    "Caffeine_mg": 40,
+    "Caffeine_mg": "40",
     "Amount_ml": 500,
     "mg_100_ml": 8,
     "imageName": "FaxeKondi"

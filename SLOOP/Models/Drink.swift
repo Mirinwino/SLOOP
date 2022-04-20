@@ -13,7 +13,7 @@ import SwiftUI
 struct Drink: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
-    var Caffeine_mg: Double
+    var Caffeine_mg: String
     var Amount_ml: Double
     var mg_100_ml: Double
     
