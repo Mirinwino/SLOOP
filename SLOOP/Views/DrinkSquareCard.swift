@@ -7,10 +7,13 @@
 
 import SwiftUI
 
-struct DrinkSquare: View {
+struct DrinkSquareCard: View {
     var drink: Drink
-
+    static let columns = 2
+    static let rows = (drinks.count + 1 + columns)/columns
+    
     var body: some View {
+        
         VStack {
             drink.image
                 .resizable()
@@ -36,7 +39,7 @@ struct DrinkSquare: View {
 struct DrinkSquare_Previews: PreviewProvider {
   
     static var previews: some View {
-        DrinkSquare(drink: drinks[0])
+        DrinkSquareCard(drink: drinks[0])
 //            Group {
 //                DrinkSquare(drink: drinks[0])
 //                //DrinkSquare(drink: drinks[1])
