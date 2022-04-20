@@ -30,7 +30,7 @@ struct BarChartView: View {
                       //lineColour: Color(red: 0.25, green: 0.75, blue: 1.0),
              //         strokeStyle: StrokeStyle(lineWidth: 3, dash: [5,10]))
             .averageLine(chartData: data,
-                         strokeStyle: StrokeStyle(lineWidth:2, dash: [2,7]))
+                         strokeStyle: StrokeStyle(lineWidth:0.5, dash: [2,7]))
             .xAxisGrid(chartData: data)
             .yAxisGrid(chartData: data)
             .xAxisLabels(chartData: data)
@@ -39,7 +39,7 @@ struct BarChartView: View {
             .headerBox(chartData: data)
             .legends(chartData: data, columns: [GridItem(.flexible()), GridItem(.flexible())])
             .id(data.id)
-            .frame(minWidth: 150, maxWidth: 750, minHeight: 100, idealHeight: 150, maxHeight: 300, alignment: .center)
+            .frame(minWidth: 100, maxWidth: 750, minHeight: 50, idealHeight: 70, maxHeight: 200, alignment: .center)
             .padding(.horizontal)
             //.navigationTitle("Week of Data")
     }
@@ -52,7 +52,6 @@ struct BarChartView: View {
          ExtraLineDataPoint(value: 60),
          ExtraLineDataPoint(value: 100),
          ExtraLineDataPoint(value: 600)]
-        
     }
     
     
@@ -60,19 +59,18 @@ struct BarChartView: View {
         
         let data : RangedBarDataSet =
             RangedBarDataSet(dataPoints: [
-                
                 RangedBarDataPoint(lowerValue: 0, upperValue: 8 , xAxisLabel: "Mon", description: "Monday"),
-                RangedBarDataPoint(lowerValue: 1, upperValue: 8 , xAxisLabel: "Tue", description: "Tuesday"),
-                RangedBarDataPoint(lowerValue: 0, upperValue: 8 , xAxisLabel: "Wed", description: "Wednesday"),
-                RangedBarDataPoint(lowerValue: 1, upperValue: 8, xAxisLabel: "Thu", description: "Thursday"),
-                RangedBarDataPoint(lowerValue: 0, upperValue: 8 , xAxisLabel: "Fri", description: "Friday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 7 , xAxisLabel: "Tue", description: "Tuesday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 6.5 , xAxisLabel: "Wed", description: "Wednesday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 7, xAxisLabel: "Thu", description: "Thursday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 9 , xAxisLabel: "Fri", description: "Friday"),
                 RangedBarDataPoint(lowerValue: 0, upperValue: 8, xAxisLabel: "Sat", description: "Saturday"),
-                RangedBarDataPoint(lowerValue: 0.5, upperValue: 8 , xAxisLabel: "Sun", description: "Sunday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 7 , xAxisLabel: "Sun", description: "Sunday"),
             ],
             legendTitle: "sleep hours")
                         
         let gridStyle  = GridStyle(numberOfLines: 11,
-                                   lineColour  : Color(.lightGray).opacity(0.25),
+                                   lineColour  : Color("AppDarkTeal").opacity(0.25),
                                    lineWidth   : 1)
         
         let chartStyle = BarChartStyle(infoBoxPlacement   : .infoBox(isStatic: false),
@@ -81,9 +79,9 @@ struct BarChartView: View {
                                        xAxisLabelsFrom    : .dataPoint(rotation: .degrees(0)),
                                        yAxisGridStyle     : gridStyle,
                                        yAxisLabelPosition : .leading,
-                                       yAxisNumberOfLabels: 8,
+                                       yAxisNumberOfLabels: 6,
                                        //baseline: .minimumWithMaximum(of: 30),
-                                       topLine: .maximum(of: 12))
+                                       topLine: .maximum(of: 10))
         
         return RangedBarChartData(dataSets: data,
                                   //metadata: ChartMetadata(title: "Heart Rate", subtitle: "Over 24 Hours"),
@@ -91,8 +89,7 @@ struct BarChartView: View {
                                   barStyle: BarStyle(barWidth: 0.75,
                                                      cornerRadius: CornerRadius(top: 16, bottom: 6),
                                                      colourFrom: .barStyle,
-                                                     colour: ColourStyle(colours: [Color.init(red: 0.25, green: 0.25, blue: 1),
-                                                                                   Color.init(red: 0.25, green: 0.5, blue: 0.8)],
+                                                     colour: ColourStyle(colours: [Color("AppDarkTeal"), Color("AppDarkTeal")],
                                                                              startPoint: .bottom, endPoint: .top)),
                                   chartStyle: chartStyle)
     }
@@ -107,6 +104,5 @@ struct RangedBarChartDemoView_Previews: PreviewProvider {
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
-        .previewInterfaceOrientation(.portrait)
     }
 }
