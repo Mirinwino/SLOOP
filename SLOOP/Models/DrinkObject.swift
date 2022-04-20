@@ -15,6 +15,7 @@ struct Drink: Hashable, Codable, Identifiable {
     var Caffeine_mg: Double
     var Amount_ml: Double
     var mg_100_ml: Double
+    var time: TimeZone
     
     private var imageName: String
     var image: Image {

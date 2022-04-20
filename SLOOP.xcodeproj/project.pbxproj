@@ -11,7 +11,7 @@
 		7E4EC2FC281023F40009A0C0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 7E4EC2FB281023F40009A0C0 /* SwiftUICharts */; };
 		7E4EC2FE28102C5D0009A0C0 /* DrinkSquareCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4EC2FD28102C5D0009A0C0 /* DrinkSquareCard.swift */; };
 		7E4EC30028102C890009A0C0 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4EC2FF28102C890009A0C0 /* ModelData.swift */; };
-		7E4EC30228102C9F0009A0C0 /* drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4EC30128102C9F0009A0C0 /* drinks.swift */; };
+		7E4EC30228102C9F0009A0C0 /* DrinkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4EC30128102C9F0009A0C0 /* DrinkObject.swift */; };
 		7E6E75062810164A00DE4BA4 /* SLOOPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E75052810164A00DE4BA4 /* SLOOPApp.swift */; };
 		7E6E75082810164A00DE4BA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E75072810164A00DE4BA4 /* ContentView.swift */; };
 		7E6E750A2810164B00DE4BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E75092810164B00DE4BA4 /* Assets.xcassets */; };
@@ -44,7 +44,7 @@
 		7E4EC2F8281023B50009A0C0 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		7E4EC2FD28102C5D0009A0C0 /* DrinkSquareCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSquareCard.swift; sourceTree = "<group>"; };
 		7E4EC2FF28102C890009A0C0 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		7E4EC30128102C9F0009A0C0 /* drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drinks.swift; sourceTree = "<group>"; };
+		7E4EC30128102C9F0009A0C0 /* DrinkObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkObject.swift; sourceTree = "<group>"; };
 		7E6E75022810164A00DE4BA4 /* SLOOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLOOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6E75052810164A00DE4BA4 /* SLOOPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLOOPApp.swift; sourceTree = "<group>"; };
 		7E6E75072810164A00DE4BA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				7E4EC2FF28102C890009A0C0 /* ModelData.swift */,
-				7E4EC30128102C9F0009A0C0 /* drinks.swift */,
+				7E4EC30128102C9F0009A0C0 /* DrinkObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,7 +313,7 @@
 				7E6E75062810164A00DE4BA4 /* SLOOPApp.swift in Sources */,
 				7E4EC30028102C890009A0C0 /* ModelData.swift in Sources */,
 				7E4EC2F9281023B50009A0C0 /* BarChartView.swift in Sources */,
-				7E4EC30228102C9F0009A0C0 /* drinks.swift in Sources */,
+				7E4EC30228102C9F0009A0C0 /* DrinkObject.swift in Sources */,
 				7E4EC2FE28102C5D0009A0C0 /* DrinkSquareCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -455,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
