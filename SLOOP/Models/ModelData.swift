@@ -8,8 +8,6 @@
 import Foundation
 
 
-import Foundation
-
 var drinks: [Drink] = load("drinksdata.json")
 
 

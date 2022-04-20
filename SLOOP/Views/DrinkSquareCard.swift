@@ -34,12 +34,16 @@ struct DrinkSquare: View {
 
 
 struct DrinkSquare_Previews: PreviewProvider {
+  
     static var previews: some View {
-        Group {
-            DrinkSquare(drink: drinks[0])
-            DrinkSquare(drink: drinks[1])
-        }
-        .previewLayout(.fixed(width: 200, height: 200))
+       
+            Group {
+                DrinkSquare(drink: drinks[0])
+                DrinkSquare(drink: drinks[1])
+            }
+            .previewLayout(.fixed(width: 200, height: 200))
+               
+        
     }
     
 }
