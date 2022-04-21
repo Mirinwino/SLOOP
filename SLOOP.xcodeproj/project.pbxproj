@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0FFC142811D75F00E29D5C /* BarChartCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0FFC132811D75F00E29D5C /* BarChartCoffee.swift */; };
 		7E4EC2F9281023B50009A0C0 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4EC2F8281023B50009A0C0 /* BarChartView.swift */; };
 		7E4EC2FC281023F40009A0C0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 7E4EC2FB281023F40009A0C0 /* SwiftUICharts */; };
 		7E4EC2FE28102C5D0009A0C0 /* DrinkSquareCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4EC2FD28102C5D0009A0C0 /* DrinkSquareCard.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E0FFC132811D75F00E29D5C /* BarChartCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartCoffee.swift; sourceTree = "<group>"; };
 		7E4EC2F8281023B50009A0C0 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		7E4EC2FD28102C5D0009A0C0 /* DrinkSquareCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSquareCard.swift; sourceTree = "<group>"; };
 		7E4EC2FF28102C890009A0C0 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				7E4EC2F8281023B50009A0C0 /* BarChartView.swift */,
 				7E4EC2FD28102C5D0009A0C0 /* DrinkSquareCard.swift */,
+				7E0FFC132811D75F00E29D5C /* BarChartCoffee.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				7E6E75062810164A00DE4BA4 /* SLOOPApp.swift in Sources */,
 				7E4EC30028102C890009A0C0 /* ModelData.swift in Sources */,
 				7E4EC2F9281023B50009A0C0 /* BarChartView.swift in Sources */,
+				7E0FFC142811D75F00E29D5C /* BarChartCoffee.swift in Sources */,
 				7E866F5C28107AD900A1555B /* CalendarView.swift in Sources */,
 				7E866F6028107C3700A1555B /* MainView.swift in Sources */,
 				7E4EC30228102C9F0009A0C0 /* Drink.swift in Sources */,

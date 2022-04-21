@@ -1,12 +1,14 @@
 //
-//  BarChart.swift
-//  SlOOP
+//  BarChartCoffee.swift
+//  SLOOP
+//
+//  Created by Miriam Peinado on 20/4/22.
 //
 
 import SwiftUI
 import SwiftUICharts
 
-struct BarChartView: View {
+struct BarChartCoffee: View {
     
     let data : RangedBarChartData = weekOfData()
     
@@ -30,7 +32,7 @@ struct BarChartView: View {
                       //lineColour: Color(red: 0.25, green: 0.75, blue: 1.0),
              //         strokeStyle: StrokeStyle(lineWidth: 3, dash: [5,10]))
             .averageLine(chartData: data,
-                         strokeStyle: StrokeStyle(lineWidth:0.5, dash: [2,7]))
+                         strokeStyle: StrokeStyle(lineWidth:0.5, dash: [2,5]))
             .xAxisGrid(chartData: data)
             .yAxisGrid(chartData: data)
             .xAxisLabels(chartData: data)
@@ -59,13 +61,13 @@ struct BarChartView: View {
         
         let data : RangedBarDataSet =
             RangedBarDataSet(dataPoints: [
-                RangedBarDataPoint(lowerValue: 0, upperValue: 8 , xAxisLabel: "Mon", description: "Monday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 10 , xAxisLabel: "Mon", description: "Monday"),
                 RangedBarDataPoint(lowerValue: 0, upperValue: 7 , xAxisLabel: "Tue", description: "Tuesday"),
-                RangedBarDataPoint(lowerValue: 0, upperValue: 6.5 , xAxisLabel: "Wed", description: "Wednesday"),
-                RangedBarDataPoint(lowerValue: 0, upperValue: 7, xAxisLabel: "Thu", description: "Thursday"),
-                RangedBarDataPoint(lowerValue: 0, upperValue: 9 , xAxisLabel: "Fri", description: "Friday"),
-                RangedBarDataPoint(lowerValue: 0, upperValue: 8, xAxisLabel: "Sat", description: "Saturday"),
-                RangedBarDataPoint(lowerValue: 0, upperValue: 7 , xAxisLabel: "Sun", description: "Sunday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 2 , xAxisLabel: "Wed", description: "Wednesday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 8, xAxisLabel: "Thu", description: "Thursday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 3 , xAxisLabel: "Fri", description: "Friday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 3, xAxisLabel: "Sat", description: "Saturday"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 5 , xAxisLabel: "Sun", description: "Sunday"),
             ],
             legendTitle: "sleep hours")
                         
@@ -89,18 +91,17 @@ struct BarChartView: View {
                                   barStyle: BarStyle(barWidth: 0.75,
                                                      cornerRadius: CornerRadius(top: 8, bottom: 6),
                                                      colourFrom: .barStyle,
-                                                     colour: ColourStyle(colours: [Color("AppDarkTeal"), Color("AppDarkTeal")],
+                                                     colour: ColourStyle(colours: [Color("AppOrange"), Color("AppOrange")],
                                                                              startPoint: .bottom, endPoint: .top)),
                                   chartStyle: chartStyle)
     }
 }
 
 
-
-struct RangedBarChartDemoView_Previews: PreviewProvider {
+struct BarChartCoffee_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone 12"], id: \.self) { deviceName in
-            BarChartView()
+            BarChartCoffee()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
