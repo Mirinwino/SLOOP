@@ -9,26 +9,24 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        TabView {
+            TabView {
                     DrinksView()
                         .tabItem {
                             Label("Drinks", systemImage: "list.dash")
                         }
-
                     CalendarView()
                         .tabItem {
                             Label("Calendar", systemImage: "calendar")
                         }
                     ContentView()
                         .tabItem {
-                            Label("Home", systemImage: "circle")
+                            Label("Home", systemImage: "cup.and.saucer")
                         }
                     ProfileView()
                         .tabItem {
                             Label("Profile", systemImage: "person.circle")
                         }
-
-                }
+        }
     }
 }
 
