@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct EthicsView: View {
+    
     var body: some View {
+        
         VStack{
             ZStack(alignment: .center){
                 Rectangle()

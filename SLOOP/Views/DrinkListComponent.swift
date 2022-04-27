@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DrinkListComponent: View {
     var drink: Drink
+    static let rows = (drinks.count)
+    
     var body: some View {
         HStack{
             drink.image
@@ -35,7 +37,7 @@ struct DrinkListComponent: View {
         .padding()
         .frame(width: 320, height: 60)
         .background(RoundedRectangle(cornerRadius: 8)
-            .fill(Color("AppLightTeal"))
+            .fill(Color("AppDrinkCard"))
             .shadow(radius: 2))
     }
 }
