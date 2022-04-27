@@ -15,17 +15,18 @@ struct ProfileView: View {
         NavigationView{
             
             VStack{
+                
                 ZStack(alignment: .center){
                     Rectangle()
                         .fill(.linearGradient(
                             Gradient(colors: [Color("AppLightTeal"), Color("AppDarkTeal")]),
                             startPoint: UnitPoint(x: 0.5, y: 0),
                             endPoint: UnitPoint(x: 0.5, y: 0.6)))
-                        .frame(width: .infinity, height: 200)
                         .edgesIgnoringSafeArea(.top)
+                        .frame(height: 200)
                     Text("Ema Watson")
                         .font(.largeTitle)
-                        .fontWeight(.heavy)
+                        .fontWeight(.light)
                         .foregroundColor(Color.white)
                 }
                 Spacer()
@@ -80,7 +81,6 @@ struct ProfileView: View {
 
                 HStack{
                         Spacer()
-                        
                         NavigationLink(destination: EthicsView()) {
                             
                             Image(systemName: "doc.text")
@@ -92,11 +92,14 @@ struct ProfileView: View {
                          .frame(width: 320, height: 60, alignment: .topLeading)
                       
                                 
-                    }.padding()
-                        .frame(width: 320, height: 60)
-                        .background(RoundedRectangle(cornerRadius: 8)
-                        .fill(Color("AppLightTeal"))
-                        .shadow(radius: 2))
+                    }
+                    .padding()
+                    .frame(width: 320, height: 60)
+                    .background(RoundedRectangle(cornerRadius: 8)
+                    .fill(Color("AppLightTeal"))
+                    .shadow(radius: 2))
+                   
+                        
                     
                 HStack{
                     Image(systemName: "arrow.down.doc")
@@ -116,7 +119,7 @@ struct ProfileView: View {
             Spacer()
             Spacer()
             Spacer()
-        }
+        }.navigationBarTitle("Profile")
     }
     
 }

@@ -16,29 +16,29 @@ struct EthicsView: View {
                         Gradient(colors: [Color("AppLightTeal"), Color("AppDarkTeal")]),
                         startPoint: UnitPoint(x: 0.5, y: 0),
                         endPoint: UnitPoint(x: 0.5, y: 0.6)))
-                    .frame(width: .infinity, height: 200)
+                    .frame(height: 200)
                     .edgesIgnoringSafeArea(.top)
-                HStack{
-                    Button(action: {}) {
-                        HStack {
-                            Image(systemName: "chevron.backward")
-                                .foregroundColor(Color("AppDarkTeal"))
-                        }
-                        .padding()
-                        .background(Color("AppLightTeal"))
-                        .clipShape(Capsule())
-                        
-                    }
-                    .frame(width: 40, height: 40)
-                    .cornerRadius(12)
-                    Spacer()
-                    Text("Data Privacy")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color.white)
-                    Spacer()
-                }
-                .padding()
+//                HStack{
+//                    Button(action: {}) {
+//                        HStack {
+//                            Image(systemName: "chevron.backward")
+//                                .foregroundColor(Color("AppDarkTeal"))
+//                        }
+//                        .padding()
+//                        .background(Color("AppLightTeal"))
+//                        .clipShape(Capsule())
+//                        
+//                    }
+//                    .frame(width: 40, height: 40)
+//                    .cornerRadius(12)
+//                    Spacer()
+//                    Text("Data Privacy")
+//                        .font(.largeTitle)
+//                        .fontWeight(.heavy)
+//                        .foregroundColor(Color.white)
+//                    Spacer()
+//                }
+//                .padding()
             }
             Spacer()
             Text("Your sleep is unique and we want to personalize the app to help you reach your goals. To do this, we will store the data that you input and use it to suggest changes in behavior that may improve your sleep quality, based on when your tracked activity. Your data will not be shared with anyone else. We follow GDPR guidelines.")
@@ -51,7 +51,7 @@ struct EthicsView: View {
             Spacer()
             Spacer()
             Spacer()
-        }
+        }.navigationTitle("Data Price")
     }
 }
 
