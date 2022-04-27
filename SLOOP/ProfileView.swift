@@ -10,7 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     
     @State private var navigationIsShowing = false
-    @State private var isOn = false
+    @State private var isOnNotification = false
+    @State private var isOnAppleHealth = false
 
     var body: some View {
         NavigationView{
@@ -53,7 +54,7 @@ struct ProfileView: View {
                         Image(systemName: "heart.text.square")
                             .foregroundColor(Color("AppDarkTeal"))
                         Spacer()
-                        Toggle(isOn: $isOn) {
+                        Toggle(isOn: $isOnAppleHealth) {
                             /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Label@*/Text("Apple health Sync")/*@END_MENU_TOKEN@*/.fontWeight(.light)
                                 .foregroundColor(Color("AppDarkTeal"))
                         }
@@ -68,7 +69,7 @@ struct ProfileView: View {
                     Image(systemName: "bell.badge")
                         .foregroundColor(Color("AppDarkTeal"))
                     Spacer()
-                    Toggle(isOn: $isOn) {
+                    Toggle(isOn: $isOnNotification) {
                         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Label@*/Text("Notifications")/*@END_MENU_TOKEN@*/.fontWeight(.light)
                             .foregroundColor(Color("AppDarkTeal"))
                     }
