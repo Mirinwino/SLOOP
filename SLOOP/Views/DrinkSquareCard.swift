@@ -24,29 +24,22 @@ struct DrinkSquareCard: View {
             Text(drink.Caffeine_mg)
                 .fontWeight(.medium)
                 .foregroundColor(Color("AppDarkTeal"))
+            
         }
         .padding()
-        .background(Color("AppLightTeal"))
-        .cornerRadius(20)
-        .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color("AppDarkTeal"), lineWidth: 5)
-            )
+        .frame(width: 131, height: 131)
+        .background(RoundedRectangle(cornerRadius: 12)
+            .fill(Color("AppLightTeal"))
+            .shadow(radius: 2))
     }
 }
 
 
 struct DrinkSquare_Previews: PreviewProvider {
-  
     static var previews: some View {
-        DrinkSquareCard(drink: drinks[0])
-//            Group {
-//                DrinkSquare(drink: drinks[0])
-//                //DrinkSquare(drink: drinks[1])
-//            }
-//            .previewLayout(.fixed(width: 200, height: 200))
-               
-        
+        Group {
+            DrinkSquareCard(drink: drinks[0])
+            DrinkSquareCard(drink: drinks[1])
+        }
     }
-    
 }
