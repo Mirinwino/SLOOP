@@ -18,38 +18,36 @@ struct CalendarView: View {
             Color("AppBackground")
                 .ignoresSafeArea()
             VStack {
-                Text("Select a date")
-                    .font(.headline)
-                    .foregroundColor(Color("AppText"))
-                
                 DatePicker("Date", selection: $date)
                     .datePickerStyle(GraphicalDatePickerStyle())
+                    .accentColor(Color("AppOrange"))
+                    .background(Color("AppBackAccent"))
+                    .cornerRadius(12)
                     .frame(maxHeight: 350)
-                VStack{
+                    .padding(.bottom)
+                // selected date title in HStack to be flushed left
                 HStack{
                     Text("\(date.formatted(date: .long, time: .omitted))")
-                        .font(.title)
-                        .fontWeight(.medium)
-                        .foregroundColor(Color("AppText"))
+                    .font(.title)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color("AppText"))
+                    .multilineTextAlignment(.leading)
                     Spacer()
                 }
-                    ScrollView(.vertical, showsIndicators: false) {
+                ScrollView(.vertical, showsIndicators: false) {
                         ForEach(0..<DrinkListComponent.rows){ i in
-                            let index = i
-                              
-                            if (index > drinks.count) {
+                            if (i > drinks.count) {
                                 //nothing
-                            }else if ( index == drinks.count ){
+                            }else if ( i == drinks.count ){
                                 //Todo new drink
                             }else{
-                                DrinkListComponent(drink: drinks[index])
+                                DrinkListComponent(drink: drinks[i])
                             }
-                        }
-                    }
-                }
+                        } //end ForEach
+                    }//end ScrollView
             }
-        .padding()
-        }
+            .padding()
+        }//end ZStack for background color
     }
 }
 

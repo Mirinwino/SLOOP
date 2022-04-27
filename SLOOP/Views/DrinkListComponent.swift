@@ -31,7 +31,7 @@ struct DrinkListComponent: View {
             }
             Spacer()
             Text("Time")
-                .fontWeight(.light)
+                .fontWeight(.medium)
                 .foregroundColor(Color("AppDarkTeal"))
         }
         .padding()

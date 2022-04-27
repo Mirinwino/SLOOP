@@ -5,7 +5,9 @@
     "Caffeine_mg": "163",
     "Amount_ml": 240,
     "mg_100_ml": 95,
-    "imageName": "coffee"
+    "imageName": "coffee",
+    "imageInfo": "info_coffee",
+    "info": "Brewed coffee is made by pouring hot water onto ground coffee beans, then allowing to brew. There are several methods for doing this, including using a filter, a percolator, and a French press."
   },
   {
     "id": 2,
@@ -13,7 +15,9 @@
     "Caffeine_mg": "77",
     "Amount_ml": 30,
     "mg_100_ml": 212,
-    "imageName": "espresso"
+    "imageName": "espresso",
+    "imageInfo": "info_espresso",
+    "info": "Espresso is a coffee-brewing method of Italian origin, in which a small amount of nearly boiling water is forced under 9–10 bars of pressure through finely-ground coffee beans. Espresso coffee can be made with a wide variety of coffee beans and roast degrees."
   },
   {
     "id": 3,
@@ -21,7 +25,9 @@
     "Caffeine_mg": "77",
     "Amount_ml": 30,
     "mg_100_ml": 104,
-    "imageName": "cappuccino"
+    "imageName": "cappuccino",
+    "imageInfo": "info_cappuccino",
+    "info": "A cappuccino is an espresso-based coffee drink that originated in Austria with later development taking place in Italy, and is prepared with steamed milk foam. Variations of the drink involve the use of cream instead of milk, using non-dairy milk substitutes and flavoring with cinnamon or chocolate powder."
   },
   {
     "id": 4,
@@ -29,7 +35,9 @@
     "Caffeine_mg": "57",
     "Amount_ml": 240,
     "mg_100_ml": 26,
-    "imageName": "coffee"
+    "imageName": "instant",
+    "imageInfo": "info_instant",
+    "info": "Instant coffee, also called soluble coffee, coffee crystals, coffee powder, or powdered coffee, is a beverage derived from brewed coffee beans that enables people to quickly prepare hot coffee by adding hot water or milk to the powder or crystals and stirring."
   },
   {
     "id": 5,
@@ -37,7 +45,9 @@
     "Caffeine_mg": "42",
     "Amount_ml": 240,
     "mg_100_ml": 20,
-    "imageName": "tea_cup_1"
+    "imageName": "tea_cup_1",
+    "imageInfo": "info_tea_cup_1",
+    "info": "Black tea, also translated to red tea in various Asian languages, is a type of tea that is more oxidized than oolong, yellow, white and green teas. Black tea is generally stronger in flavour than other teas."
   },
   {
     "id": 6,
@@ -45,7 +55,9 @@
     "Caffeine_mg": "25",
     "Amount_ml": 240,
     "mg_100_ml": 7.61,
-    "imageName": "tea_cup_2"
+    "imageName": "tea_cup_2",
+    "imageInfo": "info_tea_cup_2",
+    "info": "Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas. Green tea originated in China, and since then its production and manufacture has spread to other countries in East Asia."
   },
   {
     "id": 7,
@@ -53,7 +65,9 @@
     "Caffeine_mg": "6",
     "Amount_ml": 240,
     "mg_100_ml": 2.4,
-    "imageName": "coffee_decaf"
+    "imageName": "coffee_decaf",
+    "imageInfo": "info_coffee_decaf",
+    "info": "Decaffeinated coffee is the same as regular coffee, but has a majority of its caffeine removed. Decaf coffee still contains a very small amount of caffeine (around 3 percent compared to regular coffee) since 100% of caffeine can never be removed completely."
   },
   {
     "id": 8,
@@ -61,7 +75,9 @@
     "Caffeine_mg": "5",
     "Amount_ml": 240,
     "mg_100_ml": 2,
-    "imageName": "hot_chocolate"
+    "imageName": "hot_chocolate",
+    "imageInfo": "info_hot_chocolate",
+    "info": "Hot chocolate, also known as hot cocoa or drinking chocolate, is heated chocolate milk. Hot chocolate made with melted chocolate is sometimes called drinking chocolate, characterized by less sweetness and a thicker consistency. "
   },
   {
     "id": 9,
@@ -69,7 +85,9 @@
     "Caffeine_mg": "34",
     "Amount_ml": 330,
     "mg_100_ml": 8,
-    "imageName": "cocacola"
+    "imageName": "cocacola",
+    "imageInfo": "info_cocacola",
+    "info": "Coca-Cola, or Coke, is a carbonated soft drink manufactured by the Coca-Cola Company. Originally marketed as a temperance drink and intended as a patent medicine, it was invented in the late 19th century by John Stith Pemberton in Atlanta, Georgia."
   },
   {
     "id": 10,
@@ -77,7 +95,9 @@
     "Caffeine_mg": "46",
     "Amount_ml": 330,
     "mg_100_ml": 12.96,
-    "imageName": "DietCoke"
+    "imageName": "DietCoke",
+    "imageInfo": "info_DietCoke",
+    "info": "Diet Coke, Coca-Cola Light, or Coca-Cola Light Taste, is a sugar-free and no-calorie soft drink produced and distributed by the Coca-Cola Company. It contains artificial sweeteners instead of sugar."
   },
 
   {
@@ -86,7 +106,9 @@
     "Caffeine_mg": "36",
     "Amount_ml": 330,
     "mg_100_ml": 9.58,
-    "imageName": "CZero"
+    "imageName": "CZero",
+    "imageInfo": "info_CZero",
+    "info": "Coca-Cola Zero Sugar is a diet cola produced by The Coca-Cola Company. In some countries, it is sold as Coca-Cola No Sugar. "
   },
   {
     "id": 12,
@@ -94,30 +116,48 @@
     "Caffeine_mg": "36",
     "Amount_ml": 330,
     "mg_100_ml": 9.58,
-    "imageName": "pepsi"
+    "imageName": "pepsi",
+    "imageInfo": "info_pepsi",
+    "info": "Pepsi is a carbonated soft drink manufactured by PepsiCo. Originally created and developed in 1893 by Caleb Bradham and introduced as Brad's Drink, it was renamed as Pepsi-Cola in 1898, and then shortened to Pepsi in 1961. "
   },
   {
     "id": 13,
+    "name": "Pepsi Zero",
+    "Caffeine_mg": "36",
+    "Amount_ml": 330,
+    "mg_100_ml": 9.58,
+    "imageName": "Zpepsi",
+    "imageInfo": "info_Zpepsi",
+    "info": "Pepsi Zero Sugar. Nutrition Facts. Serving Size 12 fl oz (355 mL). Servings Per Container 1. Amount Per Serving. Calories 0. %"
+  },
+  {
+    "id": 14,
     "name": "Monster",
     "Caffeine_mg": "145",
     "Amount_ml": 500,
     "mg_100_ml": 36,
-    "imageName": "monster"
+    "imageName": "monster",
+    "imageInfo": "info_monster",
+    "info": "Monster Energy is an energy drink that was created by Hansen Natural Company in April 2002. As of 2019, Monster Energy has a 35% share of the energy drink market, the second highest share after Red Bull."
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Red Bull",
     "Caffeine_mg": "76",
     "Amount_ml": 250,
     "mg_100_ml": 30,
-    "imageName": "RedBull"
+    "imageName": "RedBull",
+    "imageInfo": "info_RedBull",
+    "info": "Red Bull is a brand of energy drinks sold by Austrian company Red Bull GmbH. With 38% market share, it is the most popular energy drink brand as of 2019. Since its launch in 1987, more than 82 billion cans of Red Bull have been sold worldwide, including 7.9 billion in 2020."
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Faxe Kondi",
     "Caffeine_mg": "40",
     "Amount_ml": 500,
     "mg_100_ml": 8,
-    "imageName": "FaxeKondi"
+    "imageName": "FaxeKondi",
+    "imageInfo": "info_FaxeKondi",
+    "info": "Faxe Kondi is a Danish soft drink produced by Royal Unibrew. Marketed as a sports drink, as it contains both glucose and sugar. Faxe Kondi has been produced since 1971. Originally it was sold in beer bottles, because Faxe Bryggeri was a beer company."
   }
 ]

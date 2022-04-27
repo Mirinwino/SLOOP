@@ -19,17 +19,26 @@ struct DrinkSquareCard: View {
                 .resizable()
                 .frame(width: 50, height: 50)
             Text(drink.name)
+                .font(.body)
                 .fontWeight(.medium)
                 .foregroundColor(Color("AppDarkTeal"))
-            Text(drink.Caffeine_mg)
-                .fontWeight(.medium)
-                .foregroundColor(Color("AppDarkTeal"))
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .frame(width: 110)
+            HStack{
+                Text(drink.Caffeine_mg)
+                    .fontWeight(.light)
+                    .foregroundColor(Color("AppDarkTeal"))
+                Text("mg")
+                    .fontWeight(.light)
+                    .foregroundColor(Color("AppDarkTeal"))
+            }
             
         }
         .padding()
-        .frame(width: 131, height: 131)
+        .frame(width: 130.0, height: 130.0)
         .background(RoundedRectangle(cornerRadius: 12)
-            .fill(Color("AppLightTeal"))
+            .fill(Color("AppDrinkCard"))
             .shadow(radius: 2))
     }
 }
