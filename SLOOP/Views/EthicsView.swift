@@ -18,7 +18,8 @@ struct EthicsView: View {
                         Gradient(colors: [Color("AppLightTeal"), Color("AppDarkTeal")]),
                         startPoint: UnitPoint(x: 0.5, y: 0),
                         endPoint: UnitPoint(x: 0.5, y: 0.6)))
-                    .frame(height: 200)
+                    //.frame(height: 200)
+                    .frame(minWidth: 300, idealWidth: 300, maxWidth: 600, minHeight: 200, idealHeight: 200, maxHeight: 200)
                     .edgesIgnoringSafeArea(.top)
 //                HStack{
 //                    Button(action: {}) {
@@ -53,7 +54,7 @@ struct EthicsView: View {
             Spacer()
             Spacer()
             Spacer()
-        }.navigationTitle("Data Price")
+        }.navigationTitle("Data Privacy")
     }
 }
 
