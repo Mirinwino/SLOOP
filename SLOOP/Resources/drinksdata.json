@@ -9,30 +9,22 @@
   },
   {
     "id": 2,
-    "name": "Monster",
-    "Caffeine_mg": "145",
-    "Amount_ml": 500,
-    "mg_100_ml": 36,
-    "imageName": "monster"
-  },
-  {
-    "id": 3,
-    "name": "Shot of espresso",
+    "name": "Espresso",
     "Caffeine_mg": "77",
     "Amount_ml": 30,
     "mg_100_ml": 212,
-    "imageName": "coffee"
+    "imageName": "espresso"
+  },
+  {
+    "id": 3,
+    "name": "Cappuccino",
+    "Caffeine_mg": "77",
+    "Amount_ml": 30,
+    "mg_100_ml": 104,
+    "imageName": "cappuccino"
   },
   {
     "id": 4,
-    "name": "Red Bull",
-    "Caffeine_mg": "76",
-    "Amount_ml": 250,
-    "mg_100_ml": 30,
-    "imageName": "RedBull"
-  },
-  {
-    "id": 5,
     "name": "Instant coffee",
     "Caffeine_mg": "57",
     "Amount_ml": 240,
@@ -40,15 +32,7 @@
     "imageName": "coffee"
   },
   {
-    "id": 6,
-    "name": "Diet coke",
-    "Caffeine_mg": "46",
-    "Amount_ml": 330,
-    "mg_100_ml": 12.96,
-    "imageName": "DietCoke"
-  },
-  {
-    "id": 7,
+    "id": 5,
     "name": "Black tea",
     "Caffeine_mg": "42",
     "Amount_ml": 240,
@@ -56,12 +40,28 @@
     "imageName": "tea_cup_1"
   },
   {
+    "id": 6,
+    "name": "Green tea",
+    "Caffeine_mg": "25",
+    "Amount_ml": 240,
+    "mg_100_ml": 7.61,
+    "imageName": "tea_cup_2"
+  },
+  {
+    "id": 7,
+    "name": "Decaf coffee",
+    "Caffeine_mg": "6",
+    "Amount_ml": 240,
+    "mg_100_ml": 2.4,
+    "imageName": "coffee_decaf"
+  },
+  {
     "id": 8,
-    "name": "Coke Zero",
-    "Caffeine_mg": "36",
-    "Amount_ml": 330,
-    "mg_100_ml": 9.58,
-    "imageName": "CZero"
+    "name": "Hot chocolate",
+    "Caffeine_mg": "5",
+    "Amount_ml": 240,
+    "mg_100_ml": 2,
+    "imageName": "hot_chocolate"
   },
   {
     "id": 9,
@@ -73,30 +73,40 @@
   },
   {
     "id": 10,
-    "name": "Green tea",
-    "Caffeine_mg": "25",
-    "Amount_ml": 240,
-    "mg_100_ml": 7.61,
-    "imageName": "tea_cup_2"
+    "name": "Diet coke",
+    "Caffeine_mg": "46",
+    "Amount_ml": 330,
+    "mg_100_ml": 12.96,
+    "imageName": "DietCoke"
   },
+
   {
     "id": 11,
-    "name": "Decaf coffee",
-    "Caffeine_mg": "6",
-    "Amount_ml": 240,
-    "mg_100_ml": 2.4,
-    "imageName": "coffee_decaf"
+    "name": "Coke Zero",
+    "Caffeine_mg": "36",
+    "Amount_ml": 330,
+    "mg_100_ml": 9.58,
+    "imageName": "CZero"
   },
   {
     "id": 12,
-    "name": "Hot chocolate",
-    "Caffeine_mg": "5",
-    "Amount_ml": 240,
-    "mg_100_ml": 2,
-    "imageName": "hot_chocolate"
+    "name": "Monster",
+    "Caffeine_mg": "145",
+    "Amount_ml": 500,
+    "mg_100_ml": 36,
+    "imageName": "monster"
   },
+
   {
     "id": 13,
+    "name": "Red Bull",
+    "Caffeine_mg": "76",
+    "Amount_ml": 250,
+    "mg_100_ml": 30,
+    "imageName": "RedBull"
+  },
+  {
+    "id": 14,
     "name": "Faxe Kondi",
     "Caffeine_mg": "40",
     "Amount_ml": 500,
