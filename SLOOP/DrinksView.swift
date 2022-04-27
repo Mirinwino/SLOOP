@@ -17,7 +17,7 @@ struct DrinksView: View {
                 .ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: false) {
                 ForEach(0..<DrinkSquareCard.rows){ i in
-                  HStack {
+                  HStack(spacing: 22){
                       ForEach(0..<DrinkSquareCard.columns ){ j in
                         let index = i*DrinkSquareCard.columns + j
                           
@@ -29,7 +29,7 @@ struct DrinksView: View {
                             DrinkSquareCard(drink: drinks[index])
                         }
                       }
-                  } .padding(.bottom, 10)
+                  } .padding(10)
                 }
             }
         }

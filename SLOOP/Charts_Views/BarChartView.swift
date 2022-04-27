@@ -39,7 +39,7 @@ struct BarChartView: View {
             .headerBox(chartData: data)
             .legends(chartData: data, columns: [GridItem(.flexible()), GridItem(.flexible())])
             .id(data.id)
-            .frame(minWidth: 100, maxWidth: 750, minHeight: 50, idealHeight: 70, maxHeight: 200, alignment: .center)
+            .frame(minWidth: 100, maxWidth: 750, minHeight: 200, idealHeight: 200, maxHeight: 200, alignment: .center)
             .padding(.horizontal)
             //.navigationTitle("Week of Data")
     }

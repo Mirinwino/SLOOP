@@ -12,6 +12,7 @@ struct ContentView: View {
         ZStack {
             Color("AppBackground")
                 .ignoresSafeArea()
+        ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading){
                 // Logo + welcome
                 HStack{
@@ -25,6 +26,7 @@ struct ContentView: View {
                         .padding()
                     Spacer()
                 }
+
                 // Week date top bar
                 HStack{
                     Button(action: {}) {
@@ -57,7 +59,7 @@ struct ContentView: View {
                     .frame(width: 40, height: 40)
                     .cornerRadius(12)
                 }
-                
+
                 // Bar plots
                 VStack{
                     BarChartView()
@@ -79,7 +81,7 @@ struct ContentView: View {
                         }.padding([.top, .leading, .trailing], 4.0)
                     }
                 }
-                
+                // goals
                 VStack{
                     HStack{
                         Image(systemName: "powersleep")
@@ -117,6 +119,7 @@ struct ContentView: View {
                 // }.padding()
             }
             .padding()
+        }
         }
     }
 }
