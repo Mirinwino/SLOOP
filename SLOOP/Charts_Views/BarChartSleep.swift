@@ -1,62 +1,55 @@
 //
-//  BarChartCoffee.swift
-//  SLOOP
-//
-//  Created by Miriam Peinado on 20/4/22.
+//  BarChart.swift
+//  SlOOP
 //
 
 import SwiftUI
 import SwiftUICharts
 
-struct BarChartCoffee: View {
+struct BarChartSleep: View {
     
     let data : RangedBarChartData = weekOfData()
     
     var body: some View {
         VStack{
             HStack{
-                Text("Caffeine intate (mg)")
+                Text("Sleep (hours)")
                     .font(.body)
                     .fontWeight(.medium)
-                    .foregroundColor(Color("AppOrange"))
+                    .foregroundColor(Color("AppDarkTeal"))
                 Spacer()
             }.padding(.bottom, 5)
-
+            
             RangedBarChart(chartData: data)
-//                .touchOverlay(chartData: data, specifier: "%.0f", unit: .suffix(of: "sleep"))
-//                .averageLine(chartData: data,
-//                             strokeStyle: StrokeStyle(lineWidth:0.5, dash: [2,5]))
-                
+    //            .touchOverlay(chartData: data, specifier: "%.0f", unit: .suffix(of: "sleep"))
+            
+    //            .averageLine(chartData: data,
+    //                         strokeStyle: StrokeStyle(lineWidth:0.5, dash: [2,7]))
                 .xAxisGrid(chartData: data)
                 .yAxisGrid(chartData: data)
-            
                 .xAxisLabels(chartData: data)
                 .yAxisLabels(chartData: data)
-            
-//                .infoBox(chartData: data)
-//                .headerBox(chartData: data)
-                
+    //            .infoBox(chartData: data)
+    //            .headerBox(chartData: data)
     //            .legends(chartData: data, columns: [GridItem(.flexible()), GridItem(.flexible())])
                 .id(data.id)
                 .frame(minWidth: 100, maxWidth: .infinity, minHeight: 130, idealHeight: 130, maxHeight: 130, alignment: .center)
-                //.navigationTitle("Week of Data")
         } // end VStack
     } // end View
     
-
     static func weekOfData() -> RangedBarChartData {
+        
         let data : RangedBarDataSet =
-            RangedBarDataSet(
-                dataPoints: [
-                    RangedBarDataPoint(lowerValue: 0, upperValue: 10 , xAxisLabel: "Mon"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  7 , xAxisLabel: "Tue"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  2 , xAxisLabel: "Wed"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  8 , xAxisLabel: "Thu"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  3 , xAxisLabel: "Fri"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  3 , xAxisLabel: "Sat"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  5 , xAxisLabel: "Sun")
-                ],
-                legendTitle: "caffeine intake")
+            RangedBarDataSet(dataPoints: [
+                RangedBarDataPoint(lowerValue: 0, upperValue: 8   , xAxisLabel: "Mon"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 7   , xAxisLabel: "Tue"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 6.5 , xAxisLabel: "Wed"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 7   , xAxisLabel: "Thu"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 9   , xAxisLabel: "Fri"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 8   , xAxisLabel: "Sat"),
+                RangedBarDataPoint(lowerValue: 0, upperValue: 7   , xAxisLabel: "Sun"),
+            ],
+            legendTitle: "sleep hours")
                         
         let xgridStyle  = GridStyle(numberOfLines: 8,
                                    lineColour  : Color("AppDarkTeal").opacity(0.25),
@@ -65,35 +58,34 @@ struct BarChartCoffee: View {
                                    lineColour  : Color("AppDarkTeal").opacity(0.25),
                                    lineWidth   : 1)
         
-        let chartStyle = BarChartStyle(//infoBoxPlacement   : .infoBox(isStatic: false),
+        let chartStyle = BarChartStyle(infoBoxPlacement   : .infoBox(isStatic: false),
                                        xAxisGridStyle     : xgridStyle,
                                        xAxisLabelPosition : .bottom,
                                        xAxisLabelsFrom    : .dataPoint(rotation: .degrees(0)),
                                        yAxisGridStyle     : ygridStyle,
                                        yAxisLabelPosition : .leading,
-                                       yAxisNumberOfLabels: 6
-                                       //baseline: .minimumWithMaximum(of: 10),
-                                       //topLine: .maximum(of: 10)
-        )//end chartStyle
+                                       yAxisNumberOfLabels: 6,
+                                       //baseline: .minimumWithMaximum(of: 30),
+                                       topLine: .maximum(of: 10))
         
         return RangedBarChartData(dataSets: data,
                                   barStyle: BarStyle(barWidth: 0.75,
                                                      cornerRadius: CornerRadius(top: 8, bottom: 6),
                                                      colourFrom: .barStyle,
-                                                     colour: ColourStyle(colours: [Color("AppDarkOrange"), Color("AppOrange")],
-                                                                         startPoint: .bottom, endPoint: .top)),
+                                                     colour: ColourStyle(colours: [Color("AppVeryDarkTeal"), Color("AppDarkTeal")],
+                                                                             startPoint: .bottom, endPoint: .top)),
                                   chartStyle: chartStyle)
     }
 }
 
 
-struct BarChartCoffee_Previews: PreviewProvider {
+
+struct RangedBarChartDemoView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone 13","iPhone SE (2nd generation)" ], id: \.self) { deviceName in
-            BarChartCoffee()
+        ForEach(["iPhone 12"], id: \.self) { deviceName in
+            BarChartSleep()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
-        //.previewLayout(.fixed(width: 350, height: 500))
     }
 }

@@ -1,16 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "SwiftUICharts",
-        "repositoryURL": "https://github.com/willdale/SwiftUICharts",
-        "state": {
-          "branch": "main",
-          "revision": "5755f031cff38a410697e0a4cebdd256590e0cf8",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "charts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/danielgindi/Charts",
+      "state" : {
+        "revision" : "66546404a6739173b8e436ab6bc1f2897cd08594",
+        "version" : "3.6.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swiftuicharts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/willdale/SwiftUICharts",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5755f031cff38a410697e0a4cebdd256590e0cf8"
+      }
+    }
+  ],
+  "version" : 2
 }

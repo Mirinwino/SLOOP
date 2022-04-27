@@ -62,9 +62,9 @@ struct ContentView: View {
 
                 // Bar plots
                 VStack{
-                    BarChartView()
+                    BarChartSleep()
                     BarChartCoffee()
-                }
+                }.padding()
                 
                 
                 // input of new drinks

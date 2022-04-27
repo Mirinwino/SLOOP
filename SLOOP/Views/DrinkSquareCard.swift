@@ -47,7 +47,6 @@ struct DrinkSquare_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             DrinkSquareCard(drink: drinks[0])
-            DrinkSquareCard(drink: drinks[1])
         }
     }
 }
