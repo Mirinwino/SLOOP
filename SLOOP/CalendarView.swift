@@ -18,13 +18,17 @@ struct CalendarView: View {
             Color("AppBackground")
                 .ignoresSafeArea()
             VStack {
-                DatePicker("Date", selection: $date)
-                    .datePickerStyle(GraphicalDatePickerStyle())
-                    .accentColor(Color("AppOrange"))
-                    .background(Color("AppBackAccent"))
-                    .cornerRadius(12)
-                    .frame(maxHeight: 350)
-                    .padding(.bottom)
+                DatePicker(
+                    "Start Date",
+                    selection: $date,
+                    displayedComponents: [.date]
+                )
+                .datePickerStyle(.graphical)
+                .accentColor(Color("AppOrange"))
+                .frame(maxHeight: 350)
+                .background(Color("AppBackAccent"))
+                .cornerRadius(12)
+                
                 // selected date title in HStack to be flushed left
                 HStack{
                     Text("\(date.formatted(date: .long, time: .omitted))")
@@ -35,6 +39,7 @@ struct CalendarView: View {
                     Spacer()
                 }
                 ScrollView(.vertical, showsIndicators: false) {
+                    LazyVStack(spacing: 12){
                         ForEach(0..<DrinkListComponent.rows){ i in
                             if (i > drinks.count) {
                                 //nothing
@@ -44,9 +49,11 @@ struct CalendarView: View {
                                 DrinkListComponent(drink: drinks[i])
                             }
                         } //end ForEach
+                    }
                     }//end ScrollView
             }
-            .padding()
+            .padding(.horizontal, 25)
+            .padding(.vertical)
         }//end ZStack for background color
     }
 }

@@ -44,7 +44,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    Text("Week date")
+                    Text("Week")
                     Spacer()
                     Button(action: {}) {
                         HStack {
@@ -69,7 +69,7 @@ struct ContentView: View {
                 
                 // input of new drinks
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top){
+                    LazyHStack(alignment: .top){
                         ForEach(0..<RoundDrinks.num){ i in
                             if (i > drinks.count) {
                                 //nothing
