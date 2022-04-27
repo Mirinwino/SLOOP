@@ -49,7 +49,7 @@ struct CalendarView: View {
                                 DrinkListComponent(drink: drinks[i])
                             }
                         } //end ForEach
-                    }
+                    }.padding(4)
                     }//end ScrollView
             }
             .padding(.horizontal, 25)
