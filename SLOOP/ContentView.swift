@@ -13,6 +13,7 @@ struct ContentView: View {
             Color("AppBackground")
                 .ignoresSafeArea()
             VStack(alignment: .leading){
+                // Logo + welcome
                 HStack{
                     Spacer()
                     Image("IconNoBackground")
@@ -24,7 +25,7 @@ struct ContentView: View {
                         .padding()
                     Spacer()
                 }
-                
+                // Week date top bar
                 HStack{
                     Button(action: {}) {
                         HStack {
@@ -38,8 +39,9 @@ struct ContentView: View {
                     }
                     .frame(width: 40, height: 40)
                     .cornerRadius(12)
-
+                    
                     Spacer()
+                    
                     Text("Week date")
                     Spacer()
                     Button(action: {}) {
@@ -54,23 +56,27 @@ struct ContentView: View {
                     }
                     .frame(width: 40, height: 40)
                     .cornerRadius(12)
-                }.padding()
+                }
                 
+                // Bar plots
                 VStack{
-                BarChartView()
-                BarChartCoffee()
-                }.padding()
-
+                    BarChartView()
+                    BarChartCoffee()
+                }
+                
+                
                 // input of new drinks
                 ScrollView(.horizontal, showsIndicators: false) {
-                    ForEach(0..<RoundDrinks.num){ i in
-                        if (i > drinks.count) {
-                            //nothing
-                        }else if ( i == drinks.count ){
-                            //Todo new drink
-                        }else{
-                            RoundDrinks(drink: drinks[i])
-                        }
+                    HStack(alignment: .top){
+                        ForEach(0..<RoundDrinks.num){ i in
+                            if (i > drinks.count) {
+                                //nothing
+                            }else if ( i == drinks.count ){
+                                //Todo new drink
+                            }else{
+                                RoundDrinks(drink: drinks[i])
+                            }
+                        }.padding([.top, .leading, .trailing], 4.0)
                     }
                 }
                 
@@ -96,19 +102,19 @@ struct ContentView: View {
                     }.padding(.horizontal, 30.0)
                 }
                 
-                HStack{
-                    Spacer()
-                    Button("Add intake") {
-                    
-                    }
-                    .padding(.vertical, 10)
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .font(.title)
-                    .foregroundColor(Color.white)
-                    .background(LinearGradient(gradient: Gradient(colors: [Color("AppDarkTeal"), Color("AppDarkTeal").opacity(0.90)]), startPoint: .leading, endPoint: .trailing))
-                    .cornerRadius(12)
-                    Spacer()
-                }.padding()
+                //HStack{
+                //    Spacer()
+                //    Button("Add intake") {
+                //
+                //    }
+                //    .padding(.vertical, 10)
+                //    .frame(minWidth: 0, maxWidth: .infinity)
+                //    .font(.title)
+                //    .foregroundColor(Color.white)
+                //    .background(LinearGradient(gradient: Gradient(colors: [Color("AppDarkTeal"), Color("AppDarkTeal").opacity(0.90)]), startPoint: .leading, endPoint: .trailing))
+                //    .cornerRadius(12)
+                //    Spacer()
+                // }.padding()
             }
             .padding()
         }
