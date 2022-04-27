@@ -26,7 +26,7 @@ struct DrinksView: View {
                         DrinkSquareCard(drink: drinks[index])
                     }
                   }
-              } .padding(.bottom, 20)
+              } .padding(.bottom, 10)
             }
         }
     }

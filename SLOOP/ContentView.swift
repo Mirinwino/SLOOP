@@ -24,11 +24,34 @@ struct ContentView: View {
             }
             
             HStack{
-                Text("Left arrow")
+                Button(action: {}) {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(Color("AppDarkTeal"))
+                    }
+                    .padding()
+                    .background(Color("AppLightTeal"))
+                    .clipShape(Capsule())
+                    
+                }
+                .frame(width: 40, height: 40)
+                .cornerRadius(12)
+
                 Spacer()
                 Text("Week date")
                 Spacer()
-                Text("Right arrow")
+                Button(action: {}) {
+                    HStack {
+                        Image(systemName: "chevron.forward")
+                            .foregroundColor(Color("AppDarkTeal"))
+                    }
+                    .padding()
+                    .background(Color("AppLightTeal"))
+                    .clipShape(Capsule())
+                    
+                }
+                .frame(width: 40, height: 40)
+                .cornerRadius(12)
             }.padding()
             
             VStack{

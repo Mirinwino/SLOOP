@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct CalendarView: View {
-//    @State private var date = Date()
+    @State private var date = Date()
 
     var body: some View {
         VStack {
             Text("Select a date")
                 .font(.largeTitle)
-//            DatePicker("Date", selection: $date)
-//                .datePickerStyle(GraphicalDatePickerStyle())
-//                .frame(maxHeight: 400)
+            DatePicker("Date", selection: $date)
+                .datePickerStyle(GraphicalDatePickerStyle())
+                .frame(maxHeight: 350)
         }
     }
 }
