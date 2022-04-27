@@ -26,7 +26,7 @@ struct ProfileView: View {
                                 startPoint: UnitPoint(x: 0.5, y: 0),
                                 endPoint: UnitPoint(x: 0.5, y: 0.6)))
                             .edgesIgnoringSafeArea(.top)
-                        //.frame(height: 200)
+                            .frame(height: 200)
                             .frame(minWidth: 300, idealWidth: 300, maxWidth: 600, minHeight: 200, idealHeight: 200, maxHeight: 200)
                         Text("Ema Watson")
                             .font(.largeTitle)
@@ -122,7 +122,7 @@ struct ProfileView: View {
                     Spacer()
                     Spacer()
                     Spacer()
-                }.navigationBarTitle("Profile")
+                }.navigationBarTitle("")
             }
         }
     }
