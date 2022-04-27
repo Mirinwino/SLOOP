@@ -61,6 +61,19 @@ struct ContentView: View {
                 BarChartCoffee()
                 }.padding()
 
+                // input of new drinks
+                ScrollView(.horizontal, showsIndicators: false) {
+                    ForEach(0..<RoundDrinks.num){ i in
+                        if (i > drinks.count) {
+                            //nothing
+                        }else if ( i == drinks.count ){
+                            //Todo new drink
+                        }else{
+                            RoundDrinks(drink: drinks[i])
+                        }
+                    }
+                }
+                
                 VStack{
                     HStack{
                         Image(systemName: "powersleep")

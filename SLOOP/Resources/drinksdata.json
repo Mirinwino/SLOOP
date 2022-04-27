@@ -90,15 +90,22 @@
   },
   {
     "id": 12,
+    "name": "Pepsi",
+    "Caffeine_mg": "36",
+    "Amount_ml": 330,
+    "mg_100_ml": 9.58,
+    "imageName": "pepsi"
+  },
+  {
+    "id": 13,
     "name": "Monster",
     "Caffeine_mg": "145",
     "Amount_ml": 500,
     "mg_100_ml": 36,
     "imageName": "monster"
   },
-
   {
-    "id": 13,
+    "id": 14,
     "name": "Red Bull",
     "Caffeine_mg": "76",
     "Amount_ml": 250,
@@ -106,7 +113,7 @@
     "imageName": "RedBull"
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Faxe Kondi",
     "Caffeine_mg": "40",
     "Amount_ml": 500,

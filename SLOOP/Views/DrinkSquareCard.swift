@@ -34,7 +34,6 @@ struct DrinkSquareCard: View {
     }
 }
 
-
 struct DrinkSquare_Previews: PreviewProvider {
     static var previews: some View {
         Group {
