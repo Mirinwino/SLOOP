@@ -78,9 +78,7 @@ struct ProfileView: View {
                     .shadow(radius: 2))
 
 
-                Button(action: {}) {
-                    
-                    HStack{
+                HStack{
                         Spacer()
                         
                         NavigationLink(destination: EthicsView()) {
@@ -94,14 +92,12 @@ struct ProfileView: View {
                          .frame(width: 320, height: 60, alignment: .topLeading)
                       
                                 
-                            }
-
                     }.padding()
-                     .frame(width: 320, height: 60)
-                     .background(RoundedRectangle(cornerRadius: 8)
-                     .fill(Color("AppLightTeal"))
-                     .shadow(radius: 2))
-                
+                        .frame(width: 320, height: 60)
+                        .background(RoundedRectangle(cornerRadius: 8)
+                        .fill(Color("AppLightTeal"))
+                        .shadow(radius: 2))
+                    
                 HStack{
                     Image(systemName: "arrow.down.doc")
                         .foregroundColor(Color("AppDarkTeal"))
