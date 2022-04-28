@@ -47,7 +47,13 @@ struct CalendarView: View {
                             ForEach(intake.intake){ intake in
                                 
                                 DrinkListComponent(intake: intake)
-                        }
+                            }
+                            
+                        }else{
+                               // VStack(spacing: 15){
+                                Text("No caffeine found")
+                               // }
+                            }
                         
                             
                         }
@@ -68,7 +74,6 @@ struct CalendarView: View {
             .padding(.vertical)
         }//end ZStack for background color
     }
-}
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
