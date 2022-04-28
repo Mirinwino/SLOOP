@@ -40,15 +40,27 @@ struct CalendarView: View {
                 }
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVStack(spacing: 12){
-                        ForEach(0..<DrinkListComponent.rows){ i in
-                            if (i > drinks.count) {
-                                //nothing
-                            }else if ( i == drinks.count ){
-                                //Todo new drink
-                            }else{
-                                DrinkListComponent(drink: drinks[i])
-                            }
-                        } //end ForEach
+    
+                        if let intake = intakes.first(where: { intake in
+                            return isSameDay(date1: intake.intakeDate, date2: date)
+                        }){
+                            ForEach(intake.intake){ intake in
+                                
+                                DrinkListComponent(intake: intake)
+                        }
+                        
+                            
+                        }
+                        
+//                        ForEach(0..<DrinkListComponent.rows){ i in
+//                            if (i > drinks.count) {
+//                                //nothing
+//                            }else if ( i == drinks.count ){
+//                                //Todo new drink
+//                            }else{
+//                                DrinkListComponent(drink: drinks[i])
+//                            }
+//                        } //end ForEach
                     }.padding(4)
                     }//end ScrollView
             }
@@ -66,3 +78,11 @@ struct CalendarView_Previews: PreviewProvider {
         CalendarView()
     }
 }
+    
+func isSameDay(date1: Date, date2: Date)->Bool{
+     let calendar = Calendar.current
+      
+    return calendar.isDate(date1, inSameDayAs: date2)
+    
+}
+
