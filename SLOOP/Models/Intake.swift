@@ -14,11 +14,16 @@ struct Intake: Identifiable {
     var time: Date = Date()
 }
 
-//List of intakes
-struct IntakeData: Identifiable{
+//For static data List of intakes
+struct IntakeData: Identifiable {
     var id =  UUID().uuidString
     var intake: [Intake]
     var intakeDate: Date
+}
+
+//intake list
+class IntakesList: ObservableObject {
+    @Published var items = [Intake]()
 }
 
 func getSampleDate(offset: Int)->Date{

@@ -34,7 +34,7 @@ struct DrinkListComponent: View {
                 .foregroundColor(Color("AppDarkTeal"))
         }
         .padding()
-        .frame(width: .infinity, height: 60)
+        .frame(height: 60)
         .background(RoundedRectangle(cornerRadius: 8)
             .fill(Color("AppDrinkCard"))
             .shadow(radius: 2))

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var IntakeObservableList = IntakesList()
     var body: some View {
         ZStack {
             Color("AppBackground")
@@ -77,6 +78,7 @@ struct ContentView: View {
                                 //Todo new drink
                             }else{
                                 RoundDrinks(drink: drinks[i])
+                                
                             }
                         }.padding([.top, .leading, .trailing], 4.0)
                     }
@@ -122,7 +124,14 @@ struct ContentView: View {
         }
         }
     }
+    
+    func addNewIntake(intake: Intake) {
+        IntakeObservableList.items.append(intake)
+     }
 }
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

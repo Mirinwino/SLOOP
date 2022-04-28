@@ -58,15 +58,6 @@ struct CalendarView: View {
                             
                         }
                         
-//                        ForEach(0..<DrinkListComponent.rows){ i in
-//                            if (i > drinks.count) {
-//                                //nothing
-//                            }else if ( i == drinks.count ){
-//                                //Todo new drink
-//                            }else{
-//                                DrinkListComponent(drink: drinks[i])
-//                            }
-//                        } //end ForEach
                     }.padding(4)
                     }//end ScrollView
             }
