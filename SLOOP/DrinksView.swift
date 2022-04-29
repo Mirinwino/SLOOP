@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DrinksView: View {
     var drinks: [Drink] = load("drinksdata.json")
+    
+    
 
     init() {
             //Use this if NavigationBarTitle is with Large Font
