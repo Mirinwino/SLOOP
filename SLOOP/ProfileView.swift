@@ -25,17 +25,18 @@ struct ProfileView: View {
                                 Gradient(colors: [Color("AppLightTeal"), Color("AppDarkTeal")]),
                                 startPoint: UnitPoint(x: 0.5, y: 0),
                                 endPoint: UnitPoint(x: 0.5, y: 0.6)))
-                            .edgesIgnoringSafeArea(.top)
-                            .frame(height: 200)
                             .frame(minWidth: 300, idealWidth: 300, maxWidth: 600, minHeight: 200, idealHeight: 200, maxHeight: 200)
+                            .edgesIgnoringSafeArea(.top)
+                            
                         Text("Ema Watson")
                             .font(.largeTitle)
                             .fontWeight(.light)
                             .foregroundColor(Color.white)
-                    }
+                        
+                    } // end ZStack top with name
+                    
                     Spacer()
-                    VStack(spacing: 12){
-                        // BIRTHDAY
+                    // BIRTHDAY
                         HStack{
                             Image(systemName: "person")
                                 .foregroundColor(Color("AppDarkTeal"))
@@ -119,11 +120,10 @@ struct ProfileView: View {
                             .fill(Color("AppLightTeal"))
                             .shadow(radius: 2))
                     }
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                Spacer()
+
                 }.navigationBarTitle("")
-            }
+                .padding(.bottom, 150)
         }
     }
 }
