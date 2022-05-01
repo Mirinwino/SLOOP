@@ -19,16 +19,16 @@ struct ProfileView: View {
                 Color("AppBackground")
                     .ignoresSafeArea()
                 VStack{
-                    ZStack(alignment: .center){
+                    ZStack(alignment: .top){
                         Rectangle()
                             .fill(.linearGradient(
                                 Gradient(colors: [Color("AppLightTeal"), Color("AppDarkTeal")]),
                                 startPoint: UnitPoint(x: 0.5, y: 0),
                                 endPoint: UnitPoint(x: 0.5, y: 0.6)))
-                            .frame(minWidth: 300, idealWidth: 300, maxWidth: 600, minHeight: 200, idealHeight: 200, maxHeight: 200)
+                            .frame(minWidth: 300, idealWidth: 300, maxWidth: .infinity, minHeight: 200, idealHeight: 200, maxHeight: 200)
                             .edgesIgnoringSafeArea(.top)
                             
-                        Text("Ema Watson")
+                        Text("Rakel Olesen")
                             .font(.largeTitle)
                             .fontWeight(.light)
                             .foregroundColor(Color.white)
@@ -94,8 +94,9 @@ struct ProfileView: View {
                                 Text("About Sloop and my data")
                                     .fontWeight(.light)
                                     .foregroundColor(Color("AppDarkTeal"))
-                            }.padding()
-                                .frame(width: 320, height: 60, alignment: .topLeading)
+                            }
+                            .padding()
+                            .frame(width: 320, height: 60, alignment: .topLeading)
                         }
                         .padding()
                         .frame(width: 320, height: 60)

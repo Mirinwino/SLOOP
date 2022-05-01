@@ -14,7 +14,7 @@ struct DrinksView: View {
 
     init() {
             //Use this if NavigationBarTitle is with Large Font
-            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(red: 103/255, green: 143/255, blue: 158/255, alpha: 1.0)]
+            //UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(red: 103/255, green: 143/255, blue: 158/255, alpha: 1.0)]
 
             //Use this if NavigationBarTitle is with displayMode = .inline
             UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(red: 103/255, green: 143/255, blue: 158/255, alpha: 1.0)]

@@ -43,9 +43,7 @@ struct DinkInfoView: View {
             }
             .offset(y: 200)
             .padding(20)
-            
-            
-        }
+        }.navigationTitle(". ")
     }
 }
 
