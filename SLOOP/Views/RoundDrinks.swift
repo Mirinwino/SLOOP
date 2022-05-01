@@ -49,10 +49,12 @@ struct RoundDrinks: View {
                 } .alert(isPresented:$showingAlert) {
                     Alert(
                         title: Text("Are you sure you want to add " + drink.name + " ?"),
-                        primaryButton: .destructive(Text("Yes")) {
+                        
+                        primaryButton: .destructive(Text("Cancel")),
+                        
+                        secondaryButton: .default(Text("Yes")) {
                             print("Deleting...")
-                        },
-                        secondaryButton: .cancel()
+                        }
                     )
                 }
            
