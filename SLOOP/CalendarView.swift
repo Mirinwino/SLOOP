@@ -58,20 +58,20 @@ struct CalendarView: View {
                             
                         }
                         
-                    }.padding(4)
-                    }//end ScrollView
+                    }.padding(4) //end ScrollView
             }
             .padding(.horizontal, 25)
             .padding(.vertical)
-        }//end ZStack for background color
-    }
+        }
+    }//end ZStack for background color
+}
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        //ForEach(ColorScheme.allCases, id: \.self) {
-        //    CalendarView().preferredColorScheme($0)
-        //}
-        CalendarView()
+        ForEach(ColorScheme.allCases, id: \.self) {
+            CalendarView().preferredColorScheme($0)
+        }
+        //CalendarView()
     }
 }
     
