@@ -84,26 +84,10 @@ struct ContentView: View {
                     }
                 }
                 // goals
-                VStack{
-                    HStack{
-                        Image(systemName: "powersleep")
-                            .foregroundColor(Color("AppDarkTeal"))
-                        ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                        Text("1/3")
-                    }.padding(.horizontal, 30.0)
-                    HStack{
-                        Image(systemName: "cup.and.saucer.fill")
-                            .foregroundColor(Color("AppDarkTeal"))
-                        ProgressView(value: 0.5)
-                            .foregroundColor(Color("AppDarkTeal"))
-                        Text("1/3")
-                    }.padding(.horizontal, 30.0)
-                    HStack{
-                        Image(systemName: "bolt.fill")
-                            .foregroundColor(Color("AppDarkTeal"))
-                        ProgressView(value: 0.5)
-                        Text("1/3")
-                    }.padding(.horizontal, 30.0)
+                HStack{
+                    Spacer()
+                    BarHorizontalGoals().padding()
+                    Spacer()
                 }
                 
                 //HStack{
