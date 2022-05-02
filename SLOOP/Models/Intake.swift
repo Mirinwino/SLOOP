@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Intake: Identifiable {
+struct Intake: Identifiable, Codable {
     var id =  UUID().uuidString
     var drink: Drink
     var time: Date

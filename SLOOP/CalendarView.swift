@@ -51,10 +51,8 @@ struct CalendarView: View {
                              }
                                
                   }
-                            
                         
-                        
-                    }.padding(4) //end ScrollView
+                }.padding(4) //end ScrollView
             }
             .padding(.horizontal, 25)
             .padding(.vertical)
