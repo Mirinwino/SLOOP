@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SLOOPApp: App {
+    
+    @StateObject var intakeList: IntakeList = IntakeList()
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView().environmentObject(intakeList)
         }
     }
 }

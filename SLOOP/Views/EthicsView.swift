@@ -60,6 +60,6 @@ struct EthicsView: View {
 
 struct EthicsView_Previews: PreviewProvider {
     static var previews: some View {
-        EthicsView()
+        EthicsView().environmentObject(IntakeList())
     }
 }

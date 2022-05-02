@@ -10,8 +10,6 @@ import SwiftUI
 struct DrinksView: View {
     var drinks: [Drink] = load("drinksdata.json")
     
-    
-
     init() {
             //Use this if NavigationBarTitle is with Large Font
             //UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(red: 103/255, green: 143/255, blue: 158/255, alpha: 1.0)]
@@ -55,6 +53,6 @@ struct DrinksView: View {
 
 struct DrinksView_Previews: PreviewProvider {
     static var previews: some View {
-        DrinksView()
+        DrinksView().environmentObject(IntakeList())
     }
 }

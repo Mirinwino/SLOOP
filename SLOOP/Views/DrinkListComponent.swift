@@ -44,6 +44,7 @@ struct DrinkListComponent: View {
 
 //struct DrinksListComponent_Previews: PreviewProvider {
 //    static var previews: some View {
-//     //   DrinkListComponent(intakes[1])
+//      //DrinkListComponent(intakes[1]).environmentObject(IntakeList())
 //    }
+//}
 

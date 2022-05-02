@@ -4,11 +4,12 @@
 //
 //  Created by Miriam Peinado on 20/4/22.
 //
+import Foundation
 
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var IntakeObservableList = IntakesList()
+    @EnvironmentObject var intakeList: IntakeList
     var body: some View {
         ZStack {
             Color("AppBackground")
@@ -67,7 +68,6 @@ struct ContentView: View {
                     BarChartCoffee()
                 }.padding()
                 
-                
                 // input of new drinks
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(alignment: .top){
@@ -108,17 +108,14 @@ struct ContentView: View {
         }
         }
     }
+
     
-    func addNewIntake(intake: Intake) {
-        IntakeObservableList.items.append(intake)
-     }
 }
-
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        
+        ContentView().environmentObject(IntakeList())
+    
     }
 }

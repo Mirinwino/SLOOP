@@ -93,6 +93,7 @@ struct BarChartCoffee_Previews: PreviewProvider {
             BarChartCoffee()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
+                .environmentObject(IntakeList())
         }
         //.previewLayout(.fixed(width: 350, height: 500))
     }
