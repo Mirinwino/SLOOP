@@ -53,19 +53,16 @@ struct RoundDrinks: View {
                         primaryButton: .destructive(Text("Cancel")),
                         
                         secondaryButton: .default(Text("Yes")) {
-                            print("Deleting...")
+                            IntakeList.instance.addNewIntake(drink: drink)
                         }
                     )
                 }
            
         }
     }
+   
 }
-//func addNewIntake() {
-//    IntakeData.intakes.append((
-//
-//        //Add auto generated id in the future.
-//    }
+
 
 struct RoundDrinks_Previews: PreviewProvider {
     static var previews: some View {

@@ -10,6 +10,7 @@ import SwiftUI
 import Foundation
 
 struct CalendarView: View {
+    @EnvironmentObject var intakeList: IntakeList
     @State private var date = Date()
     var drinks: [Drink] = load("drinksdata.json")
 
@@ -40,25 +41,18 @@ struct CalendarView: View {
                 }
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVStack(spacing: 12){
-    
-                        if let intake = intakes.first(where: { intake in
-                            return isSameDay(date1: intake.intakeDate, date2: date)
-                        }){
-                            ForEach(intake.intake){ intake in
-                                
-                                DrinkListComponent(intake: intake)
-                            }
-                            
-                        }else{
-                               // VStack(spacing: 15){
-                                Text("No caffeine found")
+                            //TODO make it better
+                            ForEach(intakeList.intakes){ i in
+                                if(isSameDay(date1: i.time, date2: date)){
+                                    DrinkListComponent(intake: i)
+                                }// VStack(spacing: 15){
+                                    //Text("No caffeine found")
                                // }
-                            }
+                             }
+                               
+                  }
                         
-                            
-                        }
-                        
-                    }.padding(4) //end ScrollView
+                }.padding(4) //end ScrollView
             }
             .padding(.horizontal, 25)
             .padding(.vertical)
@@ -69,7 +63,7 @@ struct CalendarView: View {
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
-            CalendarView().preferredColorScheme($0)
+            CalendarView().environmentObject(IntakeList.instance).preferredColorScheme($0)
         }
         //CalendarView()
     }

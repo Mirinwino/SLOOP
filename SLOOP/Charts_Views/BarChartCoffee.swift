@@ -7,10 +7,11 @@
 
 import SwiftUI
 import SwiftUICharts
-
+//
+//TODO: A COUNTER OF INTAKES PER DAY to display the caffeine actouly the amount of caffeine
 struct BarChartCoffee: View {
-    
-    let data : RangedBarChartData = weekOfData()
+    @EnvironmentObject var intakeList: IntakeList
+   // var data : RangedBarChartData = weekOfData()
     
     var body: some View {
         VStack{
@@ -21,42 +22,62 @@ struct BarChartCoffee: View {
                     .foregroundColor(Color("AppOrange"))
                 Spacer()
             }.padding(.bottom, 5)
-
-            RangedBarChart(chartData: data)
+            //TODO introduce data var for BarChartCoffee.weekOfData()
+            RangedBarChart(chartData: BarChartCoffee.weekOfData())
 //                .touchOverlay(chartData: data, specifier: "%.0f", unit: .suffix(of: "sleep"))
 //                .averageLine(chartData: data,
 //                             strokeStyle: StrokeStyle(lineWidth:0.5, dash: [2,5]))
                 
-                .xAxisGrid(chartData: data)
-                .yAxisGrid(chartData: data)
+                .xAxisGrid(chartData: BarChartCoffee.weekOfData())
+                .yAxisGrid(chartData: BarChartCoffee.weekOfData())
             
-                .xAxisLabels(chartData: data)
-                .yAxisLabels(chartData: data)
+                .xAxisLabels(chartData: BarChartCoffee.weekOfData())
+                .yAxisLabels(chartData: BarChartCoffee.weekOfData())
             
 //                .infoBox(chartData: data)
 //                .headerBox(chartData: data)
                 
     //            .legends(chartData: data, columns: [GridItem(.flexible()), GridItem(.flexible())])
-                .id(data.id)
+                .id(BarChartCoffee.weekOfData().id)
                 .frame(minWidth: 100, maxWidth: .infinity, minHeight: 130, idealHeight: 130, maxHeight: 130, alignment: .center)
                 //.navigationTitle("Week of Data")
         } // end VStack
     } // end View
     
+    
+   static func weekOfData() -> RangedBarChartData {
+       //Todo: find today, list with timedates, lista points
+       
+       // frist is sunday
+       let day_names = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri" ,"Sat"]
 
-    static func weekOfData() -> RangedBarChartData {
+       // get the weekday from 1 to 7 and we -1 to make it zero based
+       let firstday = Calendar.current.component(Calendar.Component.weekday, from: Date.now) - 1
+
+       // collect all the datapoints
+       var datapoints: [RangedBarDataPoint] = []
+
+       for i in -6...0 {
+           let day = Calendar.current.date(
+               byAdding: Calendar.Component.day, value: i,  // add i*days
+               to: Date.now)
+
+           datapoints.append(
+               RangedBarDataPoint(
+                   lowerValue: 0,
+                   upperValue:  IntakeList.instance.getCaffeineAmount(date: day!),
+                   xAxisLabel: day_names[  (firstday + i + 7) % 7  ]
+               )
+           )
+
+
+       }
         let data : RangedBarDataSet =
             RangedBarDataSet(
-                dataPoints: [
-                    RangedBarDataPoint(lowerValue: 0, upperValue: 10 , xAxisLabel: "Mon"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  7 , xAxisLabel: "Tue"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  2 , xAxisLabel: "Wed"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  8 , xAxisLabel: "Thu"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  3 , xAxisLabel: "Fri"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  3 , xAxisLabel: "Sat"),
-                    RangedBarDataPoint(lowerValue: 0, upperValue:  5 , xAxisLabel: "Sun")
-                ],
+                dataPoints: datapoints,
                 legendTitle: "caffeine intake")
+        
+        
                         
         let xgridStyle  = GridStyle(numberOfLines: 8,
                                    lineColour  : Color("AppDarkTeal").opacity(0.25),

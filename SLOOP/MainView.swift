@@ -32,10 +32,10 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
+      
         ForEach(ColorScheme.allCases, id: \.self) {
             MainView().preferredColorScheme($0)
-        }
-        //MainView()
+        }     //MainView()
     }
 }
 
