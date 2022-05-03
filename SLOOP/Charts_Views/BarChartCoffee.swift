@@ -7,9 +7,10 @@
 
 import SwiftUI
 import SwiftUICharts
-
+//
+//TODO: A COUNTER OF INTAKES PER DAY to display the caffeine actouly the amount of caffeine
 struct BarChartCoffee: View {
-    
+    @EnvironmentObject var intakeList: IntakeList
     let data : RangedBarChartData = weekOfData()
     
     var body: some View {
@@ -48,6 +49,7 @@ struct BarChartCoffee: View {
         let data : RangedBarDataSet =
             RangedBarDataSet(
                 dataPoints: [
+                    //Todo displaying fot the last 7 dates
                     RangedBarDataPoint(lowerValue: 0, upperValue: 10 , xAxisLabel: "Mon"),
                     RangedBarDataPoint(lowerValue: 0, upperValue:  7 , xAxisLabel: "Tue"),
                     RangedBarDataPoint(lowerValue: 0, upperValue:  2 , xAxisLabel: "Wed"),

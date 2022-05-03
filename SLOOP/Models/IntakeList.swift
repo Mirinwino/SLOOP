@@ -63,4 +63,21 @@ class IntakeList: ObservableObject{
             UserDefaults.standard.set(enData,forKey: intakesKey)
         }
     }
+    
+    //add function of counting the caffeine intakes
+    func getCaffeineAmount(date: Date)->Double{
+        var amount = 0.0
+        for i in intakes {
+            if(isSameDay(date1: i.time, date2: date)){
+                amount = amount + i.drink.mg_100_ml
+            }
+        }
+        return amount
+    }
+    
+    func isSameDay(date1: Date, date2: Date)->Bool{
+         let calendar = Calendar.current
+         return calendar.isDate(date1, inSameDayAs: date2)
+    }
+
 }
