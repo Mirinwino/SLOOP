@@ -26,7 +26,7 @@ struct DrinksView: View {
                 Color("AppBackground")
                     .ignoresSafeArea()
                 ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(0..<DrinkSquareCard.rows){ i in
+                    ForEach(0..<DrinkSquareCard.rows){ i in#imageLiteral(resourceName: "simulator_screenshot_650AE24E-2763-4F6D-8AC2-E79D09668430.png")
                         LazyHStack(spacing: 22){
                           ForEach(0..<DrinkSquareCard.columns ){ j in
                             let index = i*DrinkSquareCard.columns + j

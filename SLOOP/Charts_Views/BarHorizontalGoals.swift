@@ -62,7 +62,7 @@ public struct BarHorizontalGoals: View {
                     
                     RoundedRectangle(cornerRadius: 8, style: .continuous)
                         .foregroundColor(Color("AppDarkTeal"))
-                        .frame(width: ((8*100)/8)*2.5, height: 16)
+                        .frame(width: ((8*100)/8)*2.1, height: 16)
                     
                     
                     
@@ -80,7 +80,7 @@ public struct BarHorizontalGoals: View {
                 
                 RoundedRectangle(cornerRadius: 8, style: .continuous)
                     .foregroundColor(Color("AppDarkTeal"))
-                    .frame(width: ((1*100)/4)*2.5, height: 16)
+                    .frame(width: ((1*100)/4)*2.1, height: 16)
                 
                 
                 
@@ -97,7 +97,7 @@ public struct BarHorizontalGoals: View {
                 
                 RoundedRectangle(cornerRadius: 8, style: .continuous)
                     .foregroundColor(Color("AppDarkTeal"))
-                    .frame(width: ((70*100)/200)*2.5, height: 16)
+                    .frame(width: ((70*100)/200)*2.1, height: 16)
                 
             
                 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct ContentView: View {
     @ObservedObject var IntakeObservableList = IntakesList()
