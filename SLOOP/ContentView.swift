@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var intakeList: IntakeList
+ 
     var body: some View {
         ZStack {
             Color("AppBackground")
@@ -114,7 +114,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
-        ContentView().environmentObject(IntakeList())
+        ContentView()
     
     }
 }

@@ -34,7 +34,7 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
       
         ForEach(ColorScheme.allCases, id: \.self) {
-            MainView().environmentObject(IntakeList()).preferredColorScheme($0)
+            MainView().preferredColorScheme($0)
         }     //MainView()
     }
 }

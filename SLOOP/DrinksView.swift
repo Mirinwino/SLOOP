@@ -53,6 +53,6 @@ struct DrinksView: View {
 
 struct DrinksView_Previews: PreviewProvider {
     static var previews: some View {
-        DrinksView().environmentObject(IntakeList())
+        DrinksView()
     }
 }

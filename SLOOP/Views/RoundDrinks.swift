@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RoundDrinks: View {
-    @EnvironmentObject var intakeList: IntakeList
     @State private var showingAlert = false
     var drink: Drink
     static let num = (drinks.count)
@@ -54,7 +53,7 @@ struct RoundDrinks: View {
                         primaryButton: .destructive(Text("Cancel")),
                         
                         secondaryButton: .default(Text("Yes")) {
-                            intakeList.addNewIntake(drink: drink)
+                            IntakeList.instance.addNewIntake(drink: drink)
                         }
                     )
                 }
@@ -67,6 +66,6 @@ struct RoundDrinks: View {
 
 struct RoundDrinks_Previews: PreviewProvider {
     static var previews: some View {
-        RoundDrinks(drink: drinks[0]).environmentObject(IntakeList())
+        RoundDrinks(drink: drinks[0])
     }
 }

@@ -49,6 +49,6 @@ struct DinkInfoView: View {
 
 struct DinkInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        DinkInfoView(drink: drinks[0]).environmentObject(IntakeList())
+        DinkInfoView(drink: drinks[0])
     }
 }

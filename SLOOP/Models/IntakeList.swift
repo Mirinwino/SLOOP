@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class IntakeList: ObservableObject{
+    static let instance = IntakeList()
     
     @Published var intakes: [Intake] = [] {
         didSet{
@@ -16,7 +17,7 @@ class IntakeList: ObservableObject{
         }
     }
     let intakesKey: String = "intakesList"
-    init(){
+    private init(){
         getIntakes();
     }
 
@@ -74,10 +75,9 @@ class IntakeList: ObservableObject{
         }
         return amount
     }
-    
     func isSameDay(date1: Date, date2: Date)->Bool{
          let calendar = Calendar.current
          return calendar.isDate(date1, inSameDayAs: date2)
     }
-
+    
 }

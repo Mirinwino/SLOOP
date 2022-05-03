@@ -63,7 +63,7 @@ struct CalendarView: View {
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
-            CalendarView().environmentObject(IntakeList()).preferredColorScheme($0)
+            CalendarView().environmentObject(IntakeList.instance).preferredColorScheme($0)
         }
         //CalendarView()
     }

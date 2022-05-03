@@ -46,7 +46,7 @@ struct DrinkSquareCard: View {
 struct DrinkSquare_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            DrinkSquareCard(drink: drinks[0]).environmentObject(IntakeList())
+            DrinkSquareCard(drink: drinks[0])
         }
     }
 }

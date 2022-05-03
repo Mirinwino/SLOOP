@@ -86,7 +86,6 @@ struct RangedBarChartDemoView_Previews: PreviewProvider {
             BarChartSleep()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
-                .environmentObject(IntakeList())
         }
     }
 }
