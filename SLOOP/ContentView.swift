@@ -77,13 +77,14 @@ struct ContentView: View {
                                 RoundDrinks(drink: drinks[i])
                                 
                             }
-                        }.padding([.top, .leading, .trailing], 4.0)
+                        }.padding([.top, .leading, .bottom], 3.5)
                     }
                 }
                 // goals
                 VStack{
                     Text("Information")
-                    Spacer()
+                        .foregroundColor(Color("AppDarkTeal"))
+                        .font(.headline)
                     BarHorizontalGoals().padding()
                     Spacer()
                 }

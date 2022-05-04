@@ -13,7 +13,7 @@ struct RoundDrinks: View {
     static let num = (drinks.count)
     
     var body: some View {
-        ZStack(alignment: .topTrailing){
+        ZStack(alignment: .center){
             
             Button (action: {
                 showingAlert = true
@@ -38,14 +38,15 @@ struct RoundDrinks: View {
                     Text("+")
                         .font(.footnote)
                         .fontWeight(.heavy)
-                        .foregroundColor(Color("AppLightTeal"))
                         .multilineTextAlignment(.center)
-                        .frame(width: 60.0)
+                        .foregroundColor(Color("AppLightTeal"))
                         .frame(width: 18, height: 18)
                         .background(RoundedRectangle(cornerRadius: 50)
                             .fill(Color("AppOrange"))
                             .shadow(radius: 2))
-                        .offset(x:-20, y:0)
+                        .offset(x:-22, y:0)
+                        .padding(.trailing, -25.0)
+
                 } .alert(isPresented:$showingAlert) {
                     Alert(
                         title: Text("Are you sure you want to add " + drink.name + " ?"),
