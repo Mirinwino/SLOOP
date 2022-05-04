@@ -35,6 +35,7 @@
 		7E866F5C28107AD900A1555B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E866F5B28107AD900A1555B /* CalendarView.swift */; };
 		7E866F5E28107AFC00A1555B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E866F5D28107AFC00A1555B /* ProfileView.swift */; };
 		7E866F6028107C3700A1555B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E866F5F28107C3700A1555B /* MainView.swift */; };
+		7E8A344E282254DF00937604 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8A344D282254DF00937604 /* HealthKit.framework */; };
 		7EB1491D2820845F0057B77D /* IntakeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB1491C2820845F0057B77D /* IntakeList.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		7E866F5B28107AD900A1555B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7E866F5D28107AFC00A1555B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7E866F5F28107C3700A1555B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7E8A344B282254DF00937604 /* SLOOP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SLOOP.entitlements; sourceTree = "<group>"; };
+		7E8A344D282254DF00937604 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		7EB1491C2820845F0057B77D /* IntakeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntakeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E4EC2FC281023F40009A0C0 /* SwiftUICharts in Frameworks */,
+				7E8A344E282254DF00937604 /* HealthKit.framework in Frameworks */,
 				7E295F912819CC6D0094CDBB /* Charts in Frameworks */,
 				7E5E035E281940E3000CF023 /* SwiftUICharts in Frameworks */,
 			);
@@ -132,6 +136,7 @@
 				7E6E75152810164B00DE4BA4 /* SLOOPTests */,
 				7E6E751F2810164B00DE4BA4 /* SLOOPUITests */,
 				7E6E75032810164A00DE4BA4 /* Products */,
+				7E8A344C282254DF00937604 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +153,7 @@
 		7E6E75042810164A00DE4BA4 /* SLOOP */ = {
 			isa = PBXGroup;
 			children = (
+				7E8A344B282254DF00937604 /* SLOOP.entitlements */,
 				7E6E75052810164A00DE4BA4 /* SLOOPApp.swift */,
 				7E866F5F28107C3700A1555B /* MainView.swift */,
 				7E6E75072810164A00DE4BA4 /* ContentView.swift */,
@@ -220,6 +226,14 @@
 				7E6E75322810234800DE4BA4 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E8A344C282254DF00937604 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E8A344D282254DF00937604 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,6 +553,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SLOOP/SLOOP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SLOOP/Preview Content\"";
@@ -546,6 +561,8 @@
 				ENABLE_PREVIEWS = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator15.2]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "$(dev)";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "$(dev)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -570,12 +587,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SLOOP/SLOOP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SLOOP/Preview Content\"";
 				DEVELOPMENT_TEAM = 6CAH7X9BN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "$(dev)";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "$(dev)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
