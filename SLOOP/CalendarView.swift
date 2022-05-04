@@ -39,8 +39,9 @@ struct CalendarView: View {
                     .multilineTextAlignment(.leading)
                     Spacer()
                 }
+                //NavigationView {
                 ScrollView(.vertical, showsIndicators: false) {
-                    LazyVStack(spacing: 12){
+                        LazyVStack(spacing: 12) {
                             //TODO make it better
                             ForEach(intakeList.intakes){ i in
                                 if(isSameDay(date1: i.time, date2: date)){
@@ -48,11 +49,10 @@ struct CalendarView: View {
                                 }// VStack(spacing: 15){
                                     //Text("No caffeine found")
                                // }
-                             }
-                               
-                  }
-                        
+                             }//.onDelete(perform: removeRows)
+                        }
                 }.padding(4) //end ScrollView
+                //}.toolbar {EditButton()}
             }
             .padding(.horizontal, 25)
             .padding(.vertical)
