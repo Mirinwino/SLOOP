@@ -7,7 +7,6 @@
 import Foundation
 
 import SwiftUI
-import HealthKit
 
 struct ContentView: View {
  

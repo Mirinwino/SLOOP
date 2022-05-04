@@ -25,19 +25,13 @@ struct BarChartCoffee: View {
             //TODO introduce data var for BarChartCoffee.weekOfData()
             RangedBarChart(chartData: BarChartCoffee.weekOfData())
 //                .touchOverlay(chartData: data, specifier: "%.0f", unit: .suffix(of: "sleep"))
-//                .averageLine(chartData: data,
-//                             strokeStyle: StrokeStyle(lineWidth:0.5, dash: [2,5]))
-                
+               
                 .xAxisGrid(chartData: BarChartCoffee.weekOfData())
                 .yAxisGrid(chartData: BarChartCoffee.weekOfData())
             
                 .xAxisLabels(chartData: BarChartCoffee.weekOfData())
                 .yAxisLabels(chartData: BarChartCoffee.weekOfData())
             
-//                .infoBox(chartData: data)
-//                .headerBox(chartData: data)
-                
-    //            .legends(chartData: data, columns: [GridItem(.flexible()), GridItem(.flexible())])
                 .id(BarChartCoffee.weekOfData().id)
                 .frame(minWidth: 100, maxWidth: .infinity, minHeight: 130, idealHeight: 130, maxHeight: 130, alignment: .center)
                 //.navigationTitle("Week of Data")
@@ -65,7 +59,7 @@ struct BarChartCoffee: View {
            datapoints.append(
                RangedBarDataPoint(
                    lowerValue: 0,
-                   upperValue:  IntakeList.instance.getCaffeineAmount(date: day!),
+                   upperValue: IntakeList.instance.getCaffeineAmount(date: day!),
                    xAxisLabel: day_names[  (firstday + i + 7) % 7  ]
                )
            )
@@ -80,7 +74,7 @@ struct BarChartCoffee: View {
         
                         
         let xgridStyle  = GridStyle(numberOfLines: 8,
-                                   lineColour  : Color("AppDarkTeal").opacity(0.25),
+                                   lineColour  : Color("AppLightTeal").opacity(0.5),
                                    lineWidth   : 1)
         let ygridStyle  = GridStyle(numberOfLines: 5,
                                    lineColour  : Color("AppDarkTeal").opacity(0.25),

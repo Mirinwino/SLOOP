@@ -5,8 +5,11 @@
 
 import SwiftUI
 import SwiftUICharts
+import HealthKit
 
 struct BarChartSleep: View {
+    
+    let healthStore = HKHealthStore()
     
     let data : RangedBarChartData = weekOfData()
     
@@ -21,17 +24,10 @@ struct BarChartSleep: View {
             }.padding(.bottom, 5)
             
             RangedBarChart(chartData: data)
-    //            .touchOverlay(chartData: data, specifier: "%.0f", unit: .suffix(of: "sleep"))
-            
-    //            .averageLine(chartData: data,
-    //                         strokeStyle: StrokeStyle(lineWidth:0.5, dash: [2,7]))
                 .xAxisGrid(chartData: data)
                 .yAxisGrid(chartData: data)
                 .xAxisLabels(chartData: data)
                 .yAxisLabels(chartData: data)
-    //            .infoBox(chartData: data)
-    //            .headerBox(chartData: data)
-    //            .legends(chartData: data, columns: [GridItem(.flexible()), GridItem(.flexible())])
                 .id(data.id)
                 .frame(minWidth: 100, maxWidth: .infinity, minHeight: 130, idealHeight: 130, maxHeight: 130, alignment: .center)
         } // end VStack
@@ -77,6 +73,7 @@ struct BarChartSleep: View {
                                   chartStyle: chartStyle)
     }
 }
+
 
 
 

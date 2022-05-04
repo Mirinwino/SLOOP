@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
+import HealthKit
 
 @main
 struct SLOOPApp: App {
-    
     @StateObject var intakeList: IntakeList = IntakeList.instance
     var body: some Scene {
         WindowGroup {
