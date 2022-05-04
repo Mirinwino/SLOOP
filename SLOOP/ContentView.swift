@@ -17,17 +17,14 @@ struct ContentView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading){
                 // Logo + welcome
-                HStack(){
+                ZStack(alignment: .leading){
                     Image("IconNoBackground")
                         .resizable()
                         .frame(width: 65, height: 60)
                     Text("Welcome to SLOOP")
                         .foregroundColor(Color("AppDarkTeal"))
                         .font(.headline)
-                        .padding(.trailing, 55)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-                        .multilineTextAlignment(.center)
-                    Spacer()
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                 }
 
                 // Week date top bar
