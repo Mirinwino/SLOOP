@@ -17,23 +17,21 @@ struct ContentView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading){
                 // Logo + welcome
-                ZStack(alignment: .leading){
-                    Spacer()
+                HStack(){
                     Image("IconNoBackground")
                         .resizable()
                         .frame(width: 65, height: 60)
-                    Spacer()
                     Text("Welcome to SLOOP")
-                        .fontWeight(.semibold)
                         .foregroundColor(Color("AppDarkTeal"))
-                        .padding()
-                        .font(.body)
-                        .frame(minWidth: 300, idealWidth: .infinity, maxWidth: .infinity)
+                        .font(.headline)
+                        .padding(.trailing, 55)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                        .multilineTextAlignment(.center)
                     Spacer()
                 }
 
                 // Week date top bar
-//                HStack{
+                HStack{
 //                    Button(action: {}) {
 //                        HStack {
 //                            Image(systemName: "chevron.backward")
@@ -46,11 +44,10 @@ struct ContentView: View {
 //                    }
 //                    .frame(width: 40, height: 40)
 //                    .cornerRadius(12)
-//
-//                    Spacer()
-//
-//                    Text("Week")
-//                    Spacer()
+                    
+                    Spacer()
+                    Text("Last Week")
+                    Spacer()
 //                    Button(action: {}) {
 //                        HStack {
 //                            Image(systemName: "chevron.forward")
@@ -63,7 +60,7 @@ struct ContentView: View {
 //                    }
 //                    .frame(width: 40, height: 40)
 //                    .cornerRadius(12)
-//                }
+                }
 
                 // Bar plots
                 VStack{
@@ -87,7 +84,8 @@ struct ContentView: View {
                     }
                 }
                 // goals
-                HStack{
+                VStack{
+                    Text("Information")
                     Spacer()
                     BarHorizontalGoals().padding()
                     Spacer()
@@ -111,7 +109,6 @@ struct ContentView: View {
         }
         }
     }
-
 }
 
 struct ContentView_Previews: PreviewProvider {

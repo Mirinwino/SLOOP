@@ -57,6 +57,7 @@ class IntakeList: ObservableObject{
     func addNewIntake(drink : Drink){
         let newintake = Intake(drink: drink,time: Date.now)
         intakes.append(newintake)
+        saveItems()
     }
     //save localy
     func saveItems(){
