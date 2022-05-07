@@ -24,7 +24,6 @@ struct BarChartCoffee: View {
             }.padding(.bottom, 5)
             //TODO introduce data var for BarChartCoffee.weekOfData()
             RangedBarChart(chartData: BarChartCoffee.weekOfData())
-//                .touchOverlay(chartData: data, specifier: "%.0f", unit: .suffix(of: "sleep"))
                
                 .xAxisGrid(chartData: BarChartCoffee.weekOfData())
                 .yAxisGrid(chartData: BarChartCoffee.weekOfData())
@@ -34,7 +33,7 @@ struct BarChartCoffee: View {
             
                 .id(BarChartCoffee.weekOfData().id)
                 .frame(minWidth: 100, maxWidth: .infinity, minHeight: 130, idealHeight: 130, maxHeight: 130, alignment: .center)
-                //.navigationTitle("Week of Data")
+                
         } // end VStack
     } // end View
     
@@ -63,8 +62,6 @@ struct BarChartCoffee: View {
                    xAxisLabel: day_names[  (firstday + i + 7) % 7  ]
                )
            )
-
-
        }
         let data : RangedBarDataSet =
             RangedBarDataSet(
@@ -80,16 +77,14 @@ struct BarChartCoffee: View {
                                    lineColour  : Color("AppDarkTeal").opacity(0.25),
                                    lineWidth   : 1)
         
-        let chartStyle = BarChartStyle(//infoBoxPlacement   : .infoBox(isStatic: false),
-                                       xAxisGridStyle     : xgridStyle,
+        let chartStyle = BarChartStyle(xAxisGridStyle     : xgridStyle,
                                        xAxisLabelPosition : .bottom,
                                        xAxisLabelsFrom    : .dataPoint(rotation: .degrees(0)),
                                        yAxisGridStyle     : ygridStyle,
                                        yAxisLabelPosition : .leading,
                                        yAxisNumberOfLabels: 6
-                                       //baseline: .minimumWithMaximum(of: 10),
-                                       //topLine: .maximum(of: 10)
-        )//end chartStyle
+                                      
+        )
         
         return RangedBarChartData(dataSets: data,
                                   barStyle: BarStyle(barWidth: 0.75,
@@ -109,6 +104,6 @@ struct BarChartCoffee_Previews: PreviewProvider {
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
-        //.previewLayout(.fixed(width: 350, height: 500))
+      
     }
 }

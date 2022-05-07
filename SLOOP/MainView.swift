@@ -9,10 +9,6 @@ import SwiftUI
 import HealthKit
 
 
-
-
-
-
 struct MainView: View {
     let store = HKHealthStore()
     @State var isReady = false
