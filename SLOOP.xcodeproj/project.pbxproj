@@ -29,6 +29,8 @@
 		7E6E75232810164B00DE4BA4 /* SLOOPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E75222810164B00DE4BA4 /* SLOOPUITestsLaunchTests.swift */; };
 		7E6E75332810234800DE4BA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E75322810234800DE4BA4 /* Localizable.strings */; };
 		7E6E75352810235B00DE4BA4 /* drinksdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E75342810235B00DE4BA4 /* drinksdata.json */; };
+		7E723162282530A9008ADF9A /* SleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E723161282530A9008ADF9A /* SleepData.swift */; };
+		7E723164282534A2008ADF9A /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E723163282534A2008ADF9A /* Sleep.swift */; };
 		7E866F5828105E4900A1555B /* Intake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E866F5728105E4900A1555B /* Intake.swift */; };
 		7E866F5A2810796800A1555B /* DrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E866F592810796800A1555B /* DrinksView.swift */; };
 		7E866F5C28107AD900A1555B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E866F5B28107AD900A1555B /* CalendarView.swift */; };
@@ -78,6 +80,8 @@
 		7E6E75222810164B00DE4BA4 /* SLOOPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLOOPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7E6E75322810234800DE4BA4 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7E6E75342810235B00DE4BA4 /* drinksdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinksdata.json; sourceTree = "<group>"; };
+		7E723161282530A9008ADF9A /* SleepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepData.swift; sourceTree = "<group>"; };
+		7E723163282534A2008ADF9A /* Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep.swift; sourceTree = "<group>"; };
 		7E866F5728105E4900A1555B /* Intake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intake.swift; sourceTree = "<group>"; };
 		7E866F592810796800A1555B /* DrinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksView.swift; sourceTree = "<group>"; };
 		7E866F5B28107AD900A1555B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 				7E4EC30128102C9F0009A0C0 /* Drink.swift */,
 				7E866F5728105E4900A1555B /* Intake.swift */,
 				7EB1491C2820845F0057B77D /* IntakeList.swift */,
+				7E723161282530A9008ADF9A /* SleepData.swift */,
+				7E723163282534A2008ADF9A /* Sleep.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +393,8 @@
 				7E4EC2F9281023B50009A0C0 /* BarChartSleep.swift in Sources */,
 				7E0FFC142811D75F00E29D5C /* BarChartCoffee.swift in Sources */,
 				7E5E03642819411C000CF023 /* EthicsView.swift in Sources */,
+				7E723162282530A9008ADF9A /* SleepData.swift in Sources */,
+				7E723164282534A2008ADF9A /* Sleep.swift in Sources */,
 				7E866F5C28107AD900A1555B /* CalendarView.swift in Sources */,
 				7E866F6028107C3700A1555B /* MainView.swift in Sources */,
 				7E295F82281982560094CDBB /* DinkInfoView.swift in Sources */,
@@ -589,7 +597,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SLOOP/Preview Content\"";
-				DEVELOPMENT_TEAM = LAD79NSWRR;
+				DEVELOPMENT_TEAM = 6CAH7X9BN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "share description";
@@ -606,7 +614,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = Wino.SLOOPMW;
+				PRODUCT_BUNDLE_IDENTIFIER = Wino.SLOOP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
